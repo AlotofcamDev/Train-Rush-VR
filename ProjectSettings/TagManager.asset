@@ -6,6 +6,8 @@ TagManager:
   tags:
   - SamplesInfoPanel
   - RoomLight
+  - Furnace
+  - Coal
   layers:
   - Default
   - TransparentFX

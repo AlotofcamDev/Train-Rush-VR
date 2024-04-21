@@ -1,4 +1,0 @@
-<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:Label text="                       Furnace" display-tooltip-when-elided="true" name="Furnace" style="height: -23px; white-space: normal;" />
-    <ui:ProgressBar value="100" name="FurnaceHealth" style="flex-direction: column-reverse; color: rgb(32, 32, 32); height: 16px; width: 196px;" />
-</ui:UXML>

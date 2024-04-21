@@ -1,0 +1,49 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+public class Furnace : MonoBehaviour
+{
+
+    public int maxHealth = 100;
+    public int currentHealth;
+    public int furnaceHeal = 20;
+
+    public float timerMax;
+    public float timer;
+
+    public HealthBar healthBar;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        currentHealth = maxHealth;
+        healthBar.SetMaxFurnaceHealth(maxHealth);
+        timer = timerMax;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {  
+        timer -= Time.deltaTime; 
+
+        if (timer <= 0.0f)
+        {
+            TakeDamage(20);
+            timer = timerMax;
+        }
+    }
+
+    void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetFurnaceHealth(currentHealth);
+    }
+
+    public void HealDamage(int heal)
+    {
+        currentHealth += heal;
+        healthBar.SetFurnaceHealth(currentHealth);
+    }
+}
