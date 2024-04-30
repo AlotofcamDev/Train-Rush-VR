@@ -24,9 +24,9 @@ public class TrainTimerDisplay : MonoBehaviour
     {
         // No coal: 1x Speed (1 second per second)
         // Full coal: 2x Speed (2 seconds per second)
-        trainPos.value += (furnace.currentHealth + furnace.maxHealth) / furnace.maxHealth * Time.deltaTime;
+        trainPos.value += ((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) / furnace.maxHealth * Time.deltaTime;
         
-        //Debug.Log(furnace.currentHealth);
+        //Debug.Log(((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) / furnace.maxHealth);
 
         if (furnace.currentHealth >= 80)
         {
