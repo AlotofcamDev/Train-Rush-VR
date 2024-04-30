@@ -37,8 +37,11 @@ public class Furnace : MonoBehaviour
 
     void TakeDamage(int damage)
     {
-        currentHealth -= damage;
-        healthBar.SetFurnaceHealth(currentHealth);
+        if (currentHealth - damage >= 0)
+        {
+            currentHealth -= damage;
+            healthBar.SetFurnaceHealth(currentHealth);
+        }
     }
 
     public void HealDamage(int heal)
