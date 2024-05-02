@@ -21,8 +21,19 @@ public class FireCannon : MonoBehaviour
     {
         if (rotatorMod.isGrabbedL && rotatorMod.isGrabbedR && (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) || OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)))
         {
-            GameObject bulletInst = Instantiate(bullet, transform.forward * barrelOffset + transform.position, Quaternion.identity);
-            bulletInst.GetComponent<Rigidbody>().AddForce(transform.forward * shotStrength, ForceMode.Impulse);
+            Shoot();
         }
+
+        // FOR DEBUGGING
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        GameObject bulletInst = Instantiate(bullet, transform.forward * barrelOffset + transform.position, Quaternion.identity);
+        bulletInst.GetComponent<Rigidbody>().AddForce(transform.forward * shotStrength, ForceMode.Impulse);
     }
 }

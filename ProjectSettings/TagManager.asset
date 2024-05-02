@@ -8,6 +8,7 @@ TagManager:
   - RoomLight
   - Furnace
   - Coal
+  - Bullet
   layers:
   - Default
   - TransparentFX
