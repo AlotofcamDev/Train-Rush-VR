@@ -12382,7 +12382,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7025928728244239129, guid: 1eefdd3eadc5e834bae252b539580810, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.52
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7025928728244239130, guid: 1eefdd3eadc5e834bae252b539580810, type: 3}
       propertyPath: m_Enabled
@@ -12392,6 +12392,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7025928728895142355, guid: 1eefdd3eadc5e834bae252b539580810, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: b9861efacb5b9364e9a754cf019ca384, type: 2}
     - target: {fileID: 7025928728895142380, guid: 1eefdd3eadc5e834bae252b539580810, type: 3}
       propertyPath: target
       value: 
@@ -13020,7 +13024,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2615747307447103629, guid: 4d75f678a75154d4b91d5de1e39214ed, type: 3}
       propertyPath: Speed
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2615747307447103629, guid: 4d75f678a75154d4b91d5de1e39214ed, type: 3}
       propertyPath: EnableLinearMovement
@@ -14895,7 +14899,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631428906}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: b9861efacb5b9364e9a754cf019ca384, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
