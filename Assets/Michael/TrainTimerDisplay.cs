@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class TrainTimerDisplay : MonoBehaviour
 {
     public Furnace furnace;
 
     public Slider trainPos;
+
+    public TextMeshProUGUI displayText;
+    private float timerMod;
+    private float trainDist;
 
     public GameObject speedArrowSlow;
     public GameObject speedArrowMed;
@@ -24,9 +29,16 @@ public class TrainTimerDisplay : MonoBehaviour
     {
         // No coal: 1x Speed (1 second per second)
         // Full coal: 2x Speed (2 seconds per second)
-        trainPos.value += ((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) / furnace.maxHealth * Time.deltaTime;
         
+        timerMod = ((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) / furnace.maxHealth * Time.deltaTime;
+
+        trainPos.value += timerMod;
+
         //Debug.Log(((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) / furnace.maxHealth);
+
+        trainDist = Mathf.Floor(trainPos.maxValue - trainPos.value);
+
+        displayText.text = trainDist + "km to station.";
 
         if (furnace.currentHealth >= 80)
         {
