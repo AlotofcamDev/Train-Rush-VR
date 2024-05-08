@@ -49,4 +49,9 @@ public class Furnace : MonoBehaviour
         currentHealth += heal;
         healthBar.SetFurnaceHealth(currentHealth);
     }
+
+    public void OnCollision(Collider other)
+    {
+
+    }
 }
