@@ -7,7 +7,7 @@ using UnityEngine.Events;
 /// DiegeticRotator is a component which will rotate between the given constraints
 /// on the specified axis when a draggable is moved.
 /// </summary>
-public class DiegeticRotatorModified : MonoBehaviour
+public class DiegeticRotatorMod2 : MonoBehaviour
 {
     //[Header("Current slider value. Don't edit here.")]
     [HideInInspector]public float currentValue = 0;
@@ -24,21 +24,20 @@ public class DiegeticRotatorModified : MonoBehaviour
     [Header("Rotator Components")]
     [Tooltip("The component which will be rotated.")]
     public Transform rotatablePart;
-    //[Tooltip("The location the grabbable will reset to when it is no longer grabbed.")]
-    //public Transform grabbableResetPoint;
+    [Tooltip("The location the grabbable will reset to when it is no longer grabbed.")]
+    public Transform grabbableResetPoint;
     [Tooltip("The axis on which the object will rotate.")]
     public RotationAxis rotationAxis;
     [Tooltip("The minimum angle of rotation for the object.")]
     public float minimumAngle = 0;
     [Tooltip("The maximum angle of rotation for the object.")]
     public float maximumAngle = 360;
-    //[Tooltip("The specified object will be outlined when the component can be grabbed. Can be null.")]
-    //public Outline inRangeOutlineHighlighter;
+    [Tooltip("The specified object will be outlined when the component can be grabbed. Can be null.")]
+    public Outline inRangeOutlineHighlighter;
 
     
     //[Tooltip("Is the object currently being grabbed?")]
-    [HideInInspector] public bool isGrabbedL;
-    [HideInInspector] public bool isGrabbedR;
+    [HideInInspector] public bool isGrabbed;
     [Header("Rotator Properties")]
     [Tooltip("Is the rotation of the object currently locked?")]
     public bool isLocked;
@@ -48,9 +47,6 @@ public class DiegeticRotatorModified : MonoBehaviour
     [Range(0.0f, 1.0f)]
     public float smoothing = 0;
     public float maximumDistanceBeforeForcedDrop = 0.5f;
-
-    public Transform LGrabReset;
-    public Transform RGrabReset;
 
     [Space(20)]
 
@@ -67,17 +63,19 @@ public class DiegeticRotatorModified : MonoBehaviour
 
 
     // Cache a reference to the grabbable.
-    //public OVRGrabbableExtended grabbable;
-    public OVRGrabbableExtended LGrab;
-    public OVRGrabbableExtended RGrab;
+    public OVRGrabbableExtended grabbable;
 
     // Where is the object currently trying to rotate towards?
     public float desiredDegrees = 0;
 
 
-    /// <summary>
-    /// Property to correctly handle external updates to the current value.
-    /// </summary>
+    public enum RotationAxis
+    {
+      XAxis,
+      YAxis,
+      ZAxis
+    };
+
     public float CurrentValue
     {
         get
@@ -94,13 +92,15 @@ public class DiegeticRotatorModified : MonoBehaviour
                 onValueChanged.Invoke(value);
 
             // Invoke the change event if the value has changed FROM or TO the minimum value.
-            if (value != CurrentValue && (value == minimumValue || CurrentValue == minimumValue)) {
+            if (value != CurrentValue && (value == minimumValue || CurrentValue == minimumValue))
+            {
                 setToMinimumValue.Invoke(value == minimumValue);
             }
 
             // Invoke the change event if the value has changed FROM or TO the maximum value.
             //if (value != CurrentValue && (value == maximumValue || CurrentValue == maximumValue)) {
-            if (value != CurrentValue && (value == maximumValue)) {
+            if (value != CurrentValue && (value == maximumValue))
+            {
                 setToMaximumValue.Invoke(value == maximumValue);
             }
 
@@ -113,17 +113,10 @@ public class DiegeticRotatorModified : MonoBehaviour
 
             //if (Mathf.Abs(newDesiredDegrees - desiredDegrees) < 20.0f)
             //{
-                desiredDegrees = newDesiredDegrees;
+            desiredDegrees = newDesiredDegrees;
             //}
         }
     }
-
-    public enum RotationAxis
-    {
-      XAxis,
-      YAxis,
-      ZAxis
-    };
 
     /// <summary>
     /// Update the rotator value when it is first created.
@@ -132,8 +125,7 @@ public class DiegeticRotatorModified : MonoBehaviour
     {
         CurrentValue = initialValue;
         onValueChanged.Invoke(CurrentValue);
-        ResetGrabbableTransformL();
-        ResetGrabbableTransformR();
+        ResetGrabbableTransform();
     }
 
     /// <summary>
@@ -142,7 +134,7 @@ public class DiegeticRotatorModified : MonoBehaviour
     /// </summary>
     protected virtual void Update()
     {
-        if (isGrabbedL && isGrabbedR && !isLocked)
+        if (isGrabbed && !isLocked)
         {
             // Calculate the closest point on the aligned axis.
             Vector3 normal = Vector3.zero;
@@ -150,8 +142,7 @@ public class DiegeticRotatorModified : MonoBehaviour
             if (rotationAxis == RotationAxis.YAxis) normal = transform.up;
             if (rotationAxis == RotationAxis.ZAxis) normal = transform.forward;
             Plane plane = new Plane(normal, rotatablePart.position);
-            Vector3 aveHandPos = (LGrab.transform.position + RGrab.transform.position) / 2f;
-            Vector3 point = plane.ClosestPointOnPlane(aveHandPos);
+            Vector3 point = plane.ClosestPointOnPlane(grabbable.transform.position);
 
             // Find the aligned vector used to calculate angles.
             Vector3 diff = transform.InverseTransformPoint(point) - 
@@ -175,14 +166,16 @@ public class DiegeticRotatorModified : MonoBehaviour
                 desiredDegrees = newDesiredDegrees;
             }
 
-            Debug.Log(desiredDegrees);
+            //Debug.Log(desiredDegrees);
 
-            // Update the value on the rotator.
+            // SEND desiredDegrees TO CONTROLLER
+
             float ratio = (desiredDegrees - minimumAngle) / (maximumAngle - minimumAngle);
             CurrentValue = minimumValue + ratio * (maximumValue - minimumValue);
 
-            //if (Vector3.Distance(aveHandPos, grabbableResetPoint.transform.position) > 
+            //if (Vector3.Distance(grabbable.transform.position, grabbableResetPoint.transform.position) >
             //    maximumDistanceBeforeForcedDrop) grabbable.grabbedBy.ForceRelease(grabbable);
+
         }
 
         Quaternion targetRotation = Quaternion.Euler(
@@ -192,17 +185,16 @@ public class DiegeticRotatorModified : MonoBehaviour
             );
 
         // Handle final smoothing.
-        if (smoothing > 0)
-        {
-            rotatablePart.localRotation = Quaternion.Lerp(rotatablePart.localRotation, targetRotation, Time.deltaTime * (1.1f - smoothing) * 10);
-        }
-        else
-        {
-            rotatablePart.localRotation = targetRotation;
-        }
+        //if (smoothing > 0)
+        //{
+        //    rotatablePart.localRotation = Quaternion.Lerp(rotatablePart.localRotation, targetRotation, Time.deltaTime * (1.1f - smoothing) * 10);
+        //}
+        //else
+        //{
+        //    rotatablePart.localRotation = targetRotation;
+        //}
 
-        if (!isGrabbedL) ResetGrabbableTransformL();
-        if (!isGrabbedR) ResetGrabbableTransformR();
+        if (!isGrabbed) ResetGrabbableTransform();
         
     }
 
@@ -212,14 +204,10 @@ public class DiegeticRotatorModified : MonoBehaviour
     private void OnEnable()
     {
         //grabbable = GetComponentInChildren<OVRGrabbableExtended>();
-        LGrab.OnGrabBegin.AddListener(OnGrabBeginL);
-        LGrab.OnGrabEnd.AddListener(OnGrabEndL);
-        //LGrab.OnEnterGrabRange.AddListener(OnEnterGrabRange);
-        //LGrab.OnExitGrabRange.AddListener(OnExitGrabRange);
-        RGrab.OnGrabBegin.AddListener(OnGrabBeginR);
-        RGrab.OnGrabEnd.AddListener(OnGrabEndR);
-        //RGrab.OnEnterGrabRange.AddListener(OnEnterGrabRange);
-        //RGrab.OnExitGrabRange.AddListener(OnExitGrabRange);
+        grabbable.OnGrabBegin.AddListener(OnGrabBegin);
+        grabbable.OnGrabEnd.AddListener(OnGrabEnd);
+        //grabbable.OnEnterGrabRange.AddListener(OnEnterGrabRange);
+        //grabbable.OnExitGrabRange.AddListener(OnExitGrabRange);
     }
 
     /// <summary>
@@ -227,14 +215,10 @@ public class DiegeticRotatorModified : MonoBehaviour
     /// </summary>
     private void OnDisable()
     {
-        LGrab.OnGrabBegin.RemoveListener(OnGrabBeginL);
-        LGrab.OnGrabEnd.RemoveListener(OnGrabEndL);
-        //LGrab.OnEnterGrabRange.RemoveListener(OnEnterGrabRange);
-        //LGrab.OnExitGrabRange.RemoveListener(OnExitGrabRange);
-        RGrab.OnGrabBegin.RemoveListener(OnGrabBeginR);
-        RGrab.OnGrabEnd.RemoveListener(OnGrabEndR);
-        //RGrab.OnEnterGrabRange.RemoveListener(OnEnterGrabRange);
-        //RGrab.OnExitGrabRange.RemoveListener(OnExitGrabRange);
+        grabbable.OnGrabBegin.RemoveListener(OnGrabBegin);
+        grabbable.OnGrabEnd.RemoveListener(OnGrabEnd);
+        //grabbable.OnEnterGrabRange.RemoveListener(OnEnterGrabRange);
+        //grabbable.OnExitGrabRange.RemoveListener(OnExitGrabRange);
     }
 
     /// <summary>
@@ -264,37 +248,18 @@ public class DiegeticRotatorModified : MonoBehaviour
     /// <summary>
     /// Actions to perform when a child grabbable begins. Override as needed. 
     /// </summary>
-    protected virtual void OnGrabBeginL()
+    protected virtual void OnGrabBegin()
     {
-        isGrabbedL = true;
-    }
-
-    protected virtual void OnGrabBeginR()
-    {
-        isGrabbedR = true;
+        isGrabbed = true;
     }
 
     /// <summary>
     /// Actions to perform when a child grabbable ends. Override as needed.
     /// </summary>
-    protected virtual void OnGrabEndL()
+    protected virtual void OnGrabEnd()
     {
-        isGrabbedL = false;
-        //ResetGrabbableTransform();
-        //if (resetWhenNotGrabbed)
-        //{
-        //    CurrentValue = minimumValue;
-        //}
-    }
-
-    protected virtual void OnGrabEndR()
-    {
-        isGrabbedR = false;
-        //ResetGrabbableTransform();
-        //if (resetWhenNotGrabbed)
-        //{
-        //    CurrentValue = minimumValue;
-        //}
+        isGrabbed = false;
+        ResetGrabbableTransform();
     }
 
     /// <summary>
@@ -316,16 +281,9 @@ public class DiegeticRotatorModified : MonoBehaviour
     /// <summary>
     /// Reset the grabbable transform back to its original location.
     /// </summary>
-    protected virtual void ResetGrabbableTransformL()
+    protected virtual void ResetGrabbableTransform ()
     {
-        LGrab.transform.position = LGrabReset.position;
-        LGrab.transform.rotation = LGrabReset.rotation;
-        
-    }
-
-    protected virtual void ResetGrabbableTransformR()
-    {
-        RGrab.transform.position = RGrabReset.position;
-        RGrab.transform.rotation = RGrabReset.rotation;
+        grabbable.transform.position = grabbableResetPoint.position;
+        grabbable.transform.rotation = grabbableResetPoint.rotation;
     }
 }
