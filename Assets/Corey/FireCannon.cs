@@ -7,7 +7,8 @@ public class FireCannon : MonoBehaviour
     public float shotStrength;
     public float barrelOffset;
 
-    public DiegeticRotatorModified rotatorMod;
+    public DiegeticRotator left;
+    public DiegeticRotator right;
     public GameObject bullet;
 
     // Start is called before the first frame update
@@ -19,7 +20,8 @@ public class FireCannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rotatorMod.isGrabbedL && rotatorMod.isGrabbedR && (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) || OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)))
+        //Debug.Log(left.isGrabbed + ", " + right.isGrabbed);
+        if (left.isGrabbed && right.isGrabbed && (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) || OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)))
         {
             Shoot();
         }
