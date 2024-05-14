@@ -9,6 +9,7 @@ TagManager:
   - Furnace
   - Coal
   - Bullet
+  - Ragdoll
   layers:
   - Default
   - TransparentFX
