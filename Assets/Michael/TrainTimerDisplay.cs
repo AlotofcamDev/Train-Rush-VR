@@ -38,7 +38,7 @@ public class TrainTimerDisplay : MonoBehaviour
 
         trainDist = Mathf.Floor(trainPos.maxValue - trainPos.value);
 
-        displayText.text = trainDist + "km to station.";
+        displayText.text = Mathf.Round(trainDist / 10) / 10 + "km to station.";
 
         if (furnace.currentHealth >= 80)
         {
