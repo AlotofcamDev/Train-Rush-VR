@@ -6,6 +6,7 @@ public class EnvironmentCheckPos : MonoBehaviour
 {
     public Furnace furnace;
     public float baseSpeed;
+    private float tempPos = 0;
 
     public int maxDist;
 
@@ -22,11 +23,15 @@ public class EnvironmentCheckPos : MonoBehaviour
     {
         speedMod = ((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) / furnace.maxHealth * Time.deltaTime;
 
-        this.transform.position = new Vector3(0, 0, this.transform.position.z - (baseSpeed * speedMod));
-
         if (this.transform.position.z < -maxDist)
         {
-            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, -this.transform.position.z);   
+            //this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, maxDist);
+            tempPos = this.transform.position.z + (maxDist * 2);
+            this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y, tempPos);
         }
+
+        this.transform.position = new Vector3(0, 0, this.transform.position.z - (baseSpeed * speedMod));
+
+
     }
 }
