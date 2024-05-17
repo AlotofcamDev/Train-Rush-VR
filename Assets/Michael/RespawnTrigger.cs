@@ -11,6 +11,7 @@ public class RespawnTrigger : MonoBehaviour
         if (other.tag == "Ragdoll")
         {
             other.transform.position = ragdollSpawn.position;
+            other.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 }
