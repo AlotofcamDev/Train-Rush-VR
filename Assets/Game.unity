@@ -38617,10 +38617,10 @@ MonoBehaviour:
   slider: {fileID: 1532467610763009218}
   gradient:
     serializedVersion: 2
-    key0: {r: 0.7735849, g: 0, b: 0, a: 1}
-    key1: {r: 0.93725497, g: 0.6039216, b: 0.050980397, a: 1}
+    key0: {r: 0.77254903, g: 0.21275824, b: 0, a: 1}
+    key1: {r: 0.9372549, g: 0.48928872, b: 0.050980378, a: 1}
     key2: {r: 0.93725497, g: 0.6039216, b: 0.050980397, a: 1}
-    key3: {r: 0.061624408, g: 1, b: 0, a: 0}
+    key3: {r: 1, g: 0.74598145, b: 0.009433806, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
@@ -49103,7 +49103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 9f1cf55c95ff6b94f9c0052072ae55d2, type: 3}
+  m_Texture: {fileID: 2800000, guid: da024631b89384040a49bb6fab0290af, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
