@@ -10,6 +10,7 @@ TagManager:
   - Coal
   - Bullet
   - Ragdoll
+  - MainTrain
   layers:
   - Default
   - TransparentFX

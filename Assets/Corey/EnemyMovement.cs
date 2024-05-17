@@ -16,7 +16,7 @@ public class EnemyMovement : MonoBehaviour
     private float topSpeed;
     [SerializeField] private float targetSpeed;
 
-    private bool isAttacking = false;
+    public bool closeEnoughToAttack = false;
 
     private Rigidbody rigidBody;
     // Start is called before the first frame update
@@ -29,9 +29,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        bool closeEnoughToAttack = transform.position.z >= target.position.z - 0.5f;
-
-        isAttacking = closeEnoughToAttack;
+        closeEnoughToAttack = transform.position.z >= target.position.z - 0.5f;
     }
 
     private void FixedUpdate()
