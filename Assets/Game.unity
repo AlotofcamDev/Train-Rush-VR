@@ -37378,6 +37378,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091027973}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &2096350754 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5062415208631084313, guid: 2d67867c52b04a745a3811575037f04e, type: 3}
+  m_PrefabInstance: {fileID: 4162540511044469288}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &2110193347
 Mesh:
   m_ObjectHideFlags: 0
@@ -48453,6 +48458,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -1528927577456127414, guid: 2d67867c52b04a745a3811575037f04e, type: 3}
+      propertyPath: bombOrigin
+      value: 
+      objectReference: {fileID: 2096350754}
     - target: {fileID: 6360574153242271193, guid: 2d67867c52b04a745a3811575037f04e, type: 3}
       propertyPath: m_RootOrder
       value: 9
