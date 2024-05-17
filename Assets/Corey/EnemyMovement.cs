@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]
-    private Transform target;
+    public Transform target;
     private Vector3 startPos;
 
     private Vector3 movementDirection = Vector3.forward;
@@ -29,7 +28,7 @@ public class EnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        closeEnoughToAttack = transform.position.z >= target.position.z - 0.5f;
+        closeEnoughToAttack = transform.position.z >= target.position.z - 2f;
     }
 
     private void FixedUpdate()
