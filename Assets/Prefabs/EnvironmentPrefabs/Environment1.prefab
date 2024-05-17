@@ -9784,7 +9784,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   furnace: {fileID: 0}
-  baseSpeed: 1
+  baseSpeed: 8
   maxDist: 0
 --- !u!1 &7507684900994925168
 GameObject:
