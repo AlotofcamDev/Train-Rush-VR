@@ -114,9 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67ddd88710dab04f9fb178d3276ba99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldown: 1
+  cooldown: 5
   throwHeight: 1
-  throwForce: 20
+  throwForce: 10
   bomb: {fileID: 2450036871282921473, guid: e0e57a65aee6c7649a6ed91d49f3edac, type: 3}
   bombOrigin: {fileID: 5523709448311359342, guid: 1eefdd3eadc5e834bae252b539580810, type: 3}
 --- !u!65 &6360574153242271204
