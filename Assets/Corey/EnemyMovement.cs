@@ -26,6 +26,8 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        target = GameObject.FindGameObjectWithTag("EnemyTarget").transform;
+
         rigidBody = GetComponent<Rigidbody>();
         startPos = transform.position;
         furnace = GameObject.FindGameObjectWithTag("Furnace").GetComponent<Furnace>();
