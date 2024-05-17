@@ -7,7 +7,7 @@ public class TrainHealth : MonoBehaviour
 {
     //public static event Action onTrainDamage;
     public float startHealth;
-    private float health;
+    public float health;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +22,13 @@ public class TrainHealth : MonoBehaviour
         
     }
 
-    private void takeDamage(float damage)
+    public void takeDamage(float damage)
     {
+        health -= damage;
 
+        if (health <= 0f)
+        {
+            Debug.Log("Game end");
+        }
     }
 }
