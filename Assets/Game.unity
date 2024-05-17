@@ -15813,6 +15813,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7399962371640948735, guid: c0a4a871c16ac2f439b99be49847e322, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399962371640948735, guid: c0a4a871c16ac2f439b99be49847e322, type: 3}
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
@@ -15835,6 +15839,18 @@ PrefabInstance:
     - target: {fileID: 7399962372006731326, guid: c0a4a871c16ac2f439b99be49847e322, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.0743
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399962373031831399, guid: c0a4a871c16ac2f439b99be49847e322, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399962373031831399, guid: c0a4a871c16ac2f439b99be49847e322, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0484
+      objectReference: {fileID: 0}
+    - target: {fileID: 7399962373031831399, guid: c0a4a871c16ac2f439b99be49847e322, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0a4a871c16ac2f439b99be49847e322, type: 3}
@@ -29044,6 +29060,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c85bb7dcadee144f9cc7ab84675bc75, type: 3}
   m_PrefabInstance: {fileID: 1384094119}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1464559239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7399962371640948729, guid: c0a4a871c16ac2f439b99be49847e322, type: 3}
+  m_PrefabInstance: {fileID: 802009218}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1464559241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1464559239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37b5ffec485f0ee478c6bf0aade75d2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coalButton: {fileID: 1464559239}
+  coalSpawner: {fileID: 38819778}
 --- !u!1001 &1464828970
 PrefabInstance:
   m_ObjectHideFlags: 0
