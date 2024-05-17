@@ -14,10 +14,10 @@ public class RotateCannon : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (leftGrab.isGrabbed && rightGrab.isGrabbed) // Maybe just lock each hand if the other isnt grabbed instead?
-        {
+        //if (leftGrab.isGrabbed && rightGrab.isGrabbed) // Maybe just lock each hand if the other isnt grabbed instead?
+        //{
             objectToRotate.localRotation = AverageRot(left.rotation, right.rotation);
-        }
+        //}
     }
 
     private Quaternion AverageRot(Quaternion a, Quaternion b)

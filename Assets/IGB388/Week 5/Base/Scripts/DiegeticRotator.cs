@@ -65,6 +65,8 @@ public class DiegeticRotator : MonoBehaviour
     // Cache a reference to the grabbable.
     public OVRGrabbableExtended grabbable;
 
+    public DiegeticRotator other;
+
     // Where is the object currently trying to rotate towards?
     protected float desiredDegrees = 0;
 
@@ -135,6 +137,11 @@ public class DiegeticRotator : MonoBehaviour
     /// </summary>
     protected virtual void Update()
     {
+        //if (!other.isGrabbed)
+        //{
+            isLocked = !other.isGrabbed;
+        //}
+
         if (isGrabbed && !isLocked)
         {
             // Calculate the closest point on the aligned axis.
@@ -259,7 +266,7 @@ public class DiegeticRotator : MonoBehaviour
         ResetGrabbableTransform();
         if (resetWhenNotGrabbed)
         {
-            CurrentValue = minimumValue;
+            CurrentValue = initialValue;
         }
     }
 

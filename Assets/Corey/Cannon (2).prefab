@@ -9,9 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8651846315824485251}
-  - component: {fileID: 8651846315824485250}
-  - component: {fileID: 8651846315824485249}
-  - component: {fileID: 8651846315824485248}
   - component: {fileID: 8651846315824485255}
   m_Layer: 0
   m_Name: Cannon (2)
@@ -27,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8651846315824485254}
-  m_LocalRotation: {x: -0, y: -0.70179105, z: -0, w: 0.7123829}
+  m_LocalRotation: {x: 0, y: -0.7017926, z: 0, w: 0.7123814}
   m_LocalPosition: {x: -3.32, y: 1.079, z: 12.94}
   m_LocalScale: {x: 0.29, y: 0.29, z: 0.29}
   m_ConstrainProportionsScale: 0
@@ -36,138 +33,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -89.142, z: 0}
---- !u!114 &8651846315824485250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8651846315824485254}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 624bdabc8a275c64095fdd5380303963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentValue: 0
-  initialValue: 0
-  minimumValue: -1
-  maximumValue: 1
-  rotatablePart: {fileID: 8651846317670885284}
-  grabbableResetPoint: {fileID: 0}
-  rotationAxis: 1
-  minimumAngle: 0
-  maximumAngle: 120
-  inRangeOutlineHighlighter: {fileID: 0}
-  isGrabbed: 0
-  isLocked: 0
-  resetWhenNotGrabbed: 0
-  smoothing: 0
-  maximumDistanceBeforeForcedDrop: 0.5
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  setToMinimumValue:
-    m_PersistentCalls:
-      m_Calls: []
-  setToMaximumValue:
-    m_PersistentCalls:
-      m_Calls: []
-  onGrabStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onGrabFinished:
-    m_PersistentCalls:
-      m_Calls: []
-  grabbable: {fileID: 0}
-  desiredDegrees: 0
---- !u!114 &8651846315824485249
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8651846315824485254}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 624bdabc8a275c64095fdd5380303963, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentValue: 0
-  initialValue: 0
-  minimumValue: -1
-  maximumValue: 1
-  rotatablePart: {fileID: 8651846317670885284}
-  grabbableResetPoint: {fileID: 0}
-  rotationAxis: 1
-  minimumAngle: 0
-  maximumAngle: 120
-  inRangeOutlineHighlighter: {fileID: 0}
-  isGrabbed: 0
-  isLocked: 0
-  resetWhenNotGrabbed: 0
-  smoothing: 0
-  maximumDistanceBeforeForcedDrop: 0.5
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  setToMinimumValue:
-    m_PersistentCalls:
-      m_Calls: []
-  setToMaximumValue:
-    m_PersistentCalls:
-      m_Calls: []
-  onGrabStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onGrabFinished:
-    m_PersistentCalls:
-      m_Calls: []
-  grabbable: {fileID: 0}
-  desiredDegrees: 0
---- !u!114 &8651846315824485248
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8651846315824485254}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b02f86a2d575b646a424b4376c6142f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentValue: 0
-  initialValue: 0
-  minimumValue: -1
-  maximumValue: 1
-  rotatablePart: {fileID: 8651846317670885284}
-  rotationAxis: 1
-  minimumAngle: 0
-  maximumAngle: 120
-  inRangeOutlineHighlighter: {fileID: 0}
-  isGrabbed: 0
-  isLocked: 0
-  resetWhenNotGrabbed: 0
-  smoothing: 0
-  maximumDistanceBeforeForcedDrop: 0.5
-  onValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  setToMinimumValue:
-    m_PersistentCalls:
-      m_Calls: []
-  setToMaximumValue:
-    m_PersistentCalls:
-      m_Calls: []
-  onGrabStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onGrabFinished:
-    m_PersistentCalls:
-      m_Calls: []
-  left: {fileID: 8651846315824485250}
-  right: {fileID: 8651846315824485249}
-  desiredDegrees: 0
 --- !u!114 &8651846315824485255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotStrength: 30
-  barrelOffset: 5
+  barrelOffset: 3
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
@@ -1134,12 +999,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 967222198623794553}
+    - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: initialValue
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: maximumAngle
-      value: 60
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: minimumAngle
@@ -1148,6 +1017,10 @@ PrefabInstance:
     - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: minimumValue
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
+      propertyPath: resetWhenNotGrabbed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8466146169738757870, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: m_Enabled
@@ -1352,12 +1225,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
+      propertyPath: other
+      value: 
+      objectReference: {fileID: 967222199481162386}
+    - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: initialValue
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: maximumAngle
-      value: 60
+      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: minimumAngle
@@ -1366,6 +1243,10 @@ PrefabInstance:
     - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: minimumValue
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8466146168874000830, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
+      propertyPath: resetWhenNotGrabbed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8466146169738757870, guid: ce5722744ec3bf2409c25a7abdc891b1, type: 3}
       propertyPath: m_Enabled
