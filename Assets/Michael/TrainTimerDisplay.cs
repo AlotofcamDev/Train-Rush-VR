@@ -7,7 +7,6 @@ using TMPro;
 public class TrainTimerDisplay : MonoBehaviour
 {
     public Furnace furnace;
-    public Shop shop;
 
     public Slider trainPos;
 

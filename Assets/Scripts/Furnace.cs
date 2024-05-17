@@ -14,7 +14,6 @@ public class Furnace : MonoBehaviour
     public float timer;
 
     public HealthBar healthBar;
-    public Shop shop;
 
     // Start is called before the first frame update
     void Start()
@@ -47,18 +46,8 @@ public class Furnace : MonoBehaviour
 
     public void HealDamage(int heal)
     {
-        if(shop.ChunkierCoal == false)
-        {
-            currentHealth += heal;
-            healthBar.SetFurnaceHealth(currentHealth);
-        }
-        else if (shop.ChunkierCoal == true)
-        {
-            currentHealth += heal + 10;
-            healthBar.SetFurnaceHealth(currentHealth);
-        }
-        
-        
+        currentHealth += heal;
+        healthBar.SetFurnaceHealth(currentHealth);
     }
 
     public void OnCollision(Collider other)
