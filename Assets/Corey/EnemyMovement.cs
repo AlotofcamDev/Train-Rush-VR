@@ -18,22 +18,31 @@ public class EnemyMovement : MonoBehaviour
     public bool closeEnoughToAttack = false;
 
     private Rigidbody rigidBody;
+
+    // Link to furnace
+    private Furnace furnace;
+    private float speedMult;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidBody = GetComponent<Rigidbody>();
         startPos = transform.position;
+        furnace = GameObject.FindGameObjectWithTag("Furnace").GetComponent<Furnace>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        // 0.5 at health = max, 0.75 at health = max/2, 1 at health = 0
+        speedMult = 1.5f - ((furnace.currentHealth + furnace.maxHealth) / (2f * furnace.maxHealth));
+
         closeEnoughToAttack = transform.position.z >= target.position.z - 2f;
     }
 
     private void FixedUpdate()
     {
-        targetSpeed = topSpeed * ((target.position.z - transform.position.z) / (target.position.z - startPos.z));
+        targetSpeed = topSpeed * ((target.position.z - transform.position.z) / (target.position.z - startPos.z)) * speedMult;
 
         Vector3 force = movementDirection * acceleration * Time.fixedDeltaTime;
         rigidBody.AddForce(force);
