@@ -30,8 +30,16 @@ public class TrainTimerDisplay : MonoBehaviour
     {
         // No coal: 1x Speed (1 second per second)
         // Full coal: 2x Speed (2 seconds per second)
-        
-        timerMod = ((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) / furnace.maxHealth * Time.deltaTime;
+
+        if (shop.FasterTrain == true)
+        {
+            timerMod = ((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) * 1.5f / furnace.maxHealth * Time.deltaTime;
+        }
+        else
+        {
+            timerMod = ((furnace.currentHealth * 1.0f) + (furnace.maxHealth * 1.0f)) / furnace.maxHealth * Time.deltaTime;
+        }
+            
 
         trainPos.value += timerMod;
 
