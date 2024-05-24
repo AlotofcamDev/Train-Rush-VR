@@ -5,9 +5,18 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/TrainDemo.unity
     guid: ec11015e5195dcd46bafacf14e873101
+  - enabled: 1
+    path: Assets/Intro.unity
+    guid: 6d0da06310edd2947aa432a958d09de6
+  - enabled: 1
+    path: Assets/Game.unity
+    guid: 3c780a65365eb404d8eb82ad2f58cc01
+  - enabled: 1
+    path: Assets/MainMenu.unity
+    guid: ba5b59adc8d5d65448a0aa04a99df46c
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 7d51d9b6748e5c645bee5c72b063900f, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dcd3a6b311f84ff43b4b5b08d91ac191, type: 2}
