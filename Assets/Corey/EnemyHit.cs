@@ -11,6 +11,7 @@ public class EnemyHit : MonoBehaviour
     private float knockbackForce;
 
     private Rigidbody rigidBody;
+    public GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class EnemyHit : MonoBehaviour
         if (health <= 0)
         {
             Die();
+            gameManager.credits = +10;
         }
     }
 

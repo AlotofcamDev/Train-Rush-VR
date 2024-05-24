@@ -474,6 +474,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3302466835841514479, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: ab0efdb14fff3ef41b40dae9136397ae, type: 3}
+    - target: {fileID: 3302466835841514480, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302466835841514480, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302466836238488705, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: 09202c8a879bf244aa9f31781ce71a93, type: 3}
+    - target: {fileID: 3302466836238488706, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302466836238488706, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 3302466836323929675, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -521,6 +545,26 @@ PrefabInstance:
     - target: {fileID: 3302466836323929677, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
       propertyPath: m_Name
       value: VendingShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302466836891526485, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 2800000, guid: e9a07cfaee4d3ba4b85753a714bd8614, type: 3}
+    - target: {fileID: 3302466836891526486, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302466836891526486, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302466837289496598, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ability_FasterTrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 3302466837540061266, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ability_ChunkierCoal
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}

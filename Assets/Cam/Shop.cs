@@ -46,7 +46,7 @@ public class Shop : MonoBehaviour
 
     public void ability_FasterTrain()
     {
-        if(gameManager.credits >= 300)
+        if(gameManager.credits >= 500)
         {
             Buy2.interactable = false;
             FasterTrain = true;
@@ -56,7 +56,7 @@ public class Shop : MonoBehaviour
 
     public void ability_ChunkierCoal()
     {
-        if (gameManager.credits >=500)
+        if (gameManager.credits >=300)
         {
             Buy3.interactable = false;
             ChunkierCoal = true;
