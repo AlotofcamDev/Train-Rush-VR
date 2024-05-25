@@ -9,6 +9,7 @@ public class Shop : MonoBehaviour
     public bool BiggerExplosion = false;
     public bool FasterTrain = false;
     public bool ChunkierCoal = false;
+    public bool FasterShooting = false;
 
     public int BuyValue1 = 400;
     public int BuyValue2 = 300;
@@ -17,6 +18,7 @@ public class Shop : MonoBehaviour
     public Button Buy1;
     public Button Buy2;
     public Button Buy3;
+    public Button Buy4;
 
     public Furnace furnace;
     public GameManager gameManager;
@@ -63,4 +65,14 @@ public class Shop : MonoBehaviour
         }
         
     }
+
+    public void ability_FasterShooting()
+    {
+        if (gameManager.credits >= 100)
+        {
+            Buy4.interactable = false;
+            FasterShooting = true;
+        }
+    }
+
 }
