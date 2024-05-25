@@ -19739,6 +19739,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3302466836323929676, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: Buy4
+      value: 
+      objectReference: {fileID: 938639258}
+    - target: {fileID: 3302466836323929676, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: furnace
+      value: 
+      objectReference: {fileID: 157544994}
+    - target: {fileID: 3302466836323929676, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 554998750}
     - target: {fileID: 3302466836323929677, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
       propertyPath: m_Name
       value: VendingShop
@@ -19766,6 +19778,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 711c8109528075041a39c4a6bff1b42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &938639258 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1824693394573638835, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+  m_PrefabInstance: {fileID: 938639256}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &954121728
@@ -25932,6 +25955,7 @@ MonoBehaviour:
   fadeTime: 2
   screenFade: {fileID: 1327478389}
   furnaceFire: {fileID: 715086400}
+  aSource: {fileID: 0}
   voicelines:
   - {fileID: 8300000, guid: 396ecb92ba4e960408d4aa877fc01bd0, type: 3}
   - {fileID: 8300000, guid: 032ee1c5b441298489278d7f568aaecc, type: 3}
