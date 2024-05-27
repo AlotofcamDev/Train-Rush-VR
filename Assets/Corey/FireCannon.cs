@@ -19,6 +19,9 @@ public class FireCannon : MonoBehaviour
 
     private bool canShoot = true;
 
+    public float fireRate = 0.5f;
+    private float fireTimer;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +31,8 @@ public class FireCannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FireCooldown();
+
         // Check if both controllers are grabbed and either index trigger is pressed
         if (left.isGrabbed && right.isGrabbed && canShoot &&
             (OVRInput.GetDown(OVRInput.RawButton.LIndexTrigger) || OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger)))
@@ -52,6 +57,8 @@ public class FireCannon : MonoBehaviour
         SimpleHapticVibrationManager.VibrateController(vibrationDuration, vibrationStrength, OVRInput.Controller.RTouch);
         particles.Play();
 
+        fireTimer = 0f;
+
         // Start the cooldown coroutine
         if (shop.FasterShooting == false)
         {
@@ -67,5 +74,12 @@ public class FireCannon : MonoBehaviour
         yield return new WaitForSeconds(cooldownTime);
         // After the wait, set canShoot to true again
         canShoot = true;
+    }
+
+    private void FireCooldown()
+    {
+        fireTimer += Time.deltaTime;
+
+        canShoot = fireTimer > fireRate;
     }
 }

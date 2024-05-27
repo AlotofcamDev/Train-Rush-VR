@@ -169,7 +169,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 50
+      scalar: 100
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -285,7 +285,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 4
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -662,7 +662,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 35
+    angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -748,7 +748,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.3
+      value: 0.1
       mode: 0
       spread: 0
       speed:
@@ -977,7 +977,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 20
+        scalar: 15
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -4981,6 +4981,7 @@ MonoBehaviour:
   particles: {fileID: 0}
   vibrationStrength: 0.5
   vibrationDuration: 0.2
+  fireRate: 0.5
 --- !u!1 &8651846316460835393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5701,6 +5702,7 @@ MonoBehaviour:
   particles: {fileID: 9203089920645953016}
   vibrationStrength: 1
   vibrationDuration: 0.1
+  fireRate: 0.5
 --- !u!1 &8651846317670885291
 GameObject:
   m_ObjectHideFlags: 0
@@ -6014,7 +6016,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.13
+  m_Radius: 0.09
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &80911904194101558
 MonoBehaviour:
@@ -6052,7 +6054,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.13
+  m_Radius: 0.09
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8752402514540773206
 MonoBehaviour:
@@ -6101,6 +6103,7 @@ MonoBehaviour:
   particles: {fileID: 0}
   vibrationStrength: 0.5
   vibrationDuration: 0.2
+  fireRate: 0.5
 --- !u!4 &9194997077188646029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 87a63fa3685a5af438ac6b5ce3c3a860, type: 3}
