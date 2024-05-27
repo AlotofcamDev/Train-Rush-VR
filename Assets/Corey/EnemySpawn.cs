@@ -43,14 +43,16 @@ public class EnemySpawn : MonoBehaviour
         int clampedIndex = (int) Mathf.Clamp(waveCounter, 0, numToSpawn.Length - 1f);
         for (int i=0; i < numToSpawn[clampedIndex]; i++)
         {
+            float forwardsOffset = Random.Range(-2f, 2f);
+
             Vector3 pos;
             bool coinFlipHeads = Random.Range(0, 2) == 0;
             if (coinFlipHeads)
             {
-                pos = new Vector3(Random.Range(leftMin.position.x, leftMax.position.x), spawnHere.position.y, spawnHere.position.z);
+                pos = new Vector3(Random.Range(leftMin.position.x, leftMax.position.x), spawnHere.position.y, spawnHere.position.z + forwardsOffset);
             } else
             {
-                pos = new Vector3(Random.Range(rightMin.position.x, rightMax.position.x), spawnHere.position.y, spawnHere.position.z);
+                pos = new Vector3(Random.Range(rightMin.position.x, rightMax.position.x), spawnHere.position.y, spawnHere.position.z + forwardsOffset);
             }
             Instantiate(enemyPrefab, pos, Quaternion.identity);
         }

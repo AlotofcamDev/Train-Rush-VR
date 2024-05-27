@@ -31,7 +31,7 @@ public class EnemyMovement : MonoBehaviour
         rigidBody = GetComponent<Rigidbody>();
         startPos = transform.position;
         furnace = GameObject.FindGameObjectWithTag("Furnace").GetComponent<Furnace>();
-        topSpeed *= Random.Range(0.8f, 1.2f);
+        topSpeed *= Random.Range(0.7f, 1.1f);
     }
 
     // Update is called once per frame

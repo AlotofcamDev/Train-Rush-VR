@@ -10695,6 +10695,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -8317031816733382023, guid: d75e86f3593b31149917872b2bc95392, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ea0cfd197a30fe246bea34ed2175c6b0, type: 2}
     - target: {fileID: -7570254706355161696, guid: d75e86f3593b31149917872b2bc95392, type: 3}
       propertyPath: m_Name
       value: RagdollMesh
@@ -23764,8 +23768,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.17, y: 2.46, z: 11.1}
-  m_Center: {x: -8.96, y: -7.38, z: -1}
+  m_Size: {x: 1.32, y: 2.46, z: 11.1}
+  m_Center: {x: -8.94, y: -7.38, z: -1}
 --- !u!1001 &1065373090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26082,6 +26086,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1204139600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204139585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dc0a2d4d4a735c47aff95934555760e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsGrabbedColor: {r: 0, g: 0, b: 0, a: 0}
+  InteractableNotCloseByColor: {r: 0, g: 0, b: 0, a: 0}
+  InteractableCloseByColor: {r: 1, g: 1, b: 1, a: 1}
+  InteractableReadyToPickup: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  OutlineMode: 1
+  OutlineWidth: 3
+  HighlightRange: 3
+  grabbable: {fileID: 0}
 --- !u!1 &1209089194
 GameObject:
   m_ObjectHideFlags: 0
@@ -30605,7 +30629,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2905837751178834281, guid: 24701c3fdc0f2764baf6bed0e1b5b110, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.29199982
+      value: -8.82
       objectReference: {fileID: 0}
     - target: {fileID: 2905837751178834281, guid: 24701c3fdc0f2764baf6bed0e1b5b110, type: 3}
       propertyPath: m_LocalPosition.z
