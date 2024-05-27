@@ -5912,6 +5912,8 @@ MonoBehaviour:
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
   shop: {fileID: 0}
   particles: {fileID: 0}
+  vibrationStrength: 0.5
+  vibrationDuration: 0.2
 --- !u!33 &838073956045398299
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6812,6 +6814,63 @@ Transform:
   m_Father: {fileID: 874427926981685326}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4476508040204150372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.605442
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.3212215
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 25.23382
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720229492373566482, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7790049730590388140, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
 --- !u!1 &5581162160319589999
 GameObject:
   m_ObjectHideFlags: 0

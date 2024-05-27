@@ -13,6 +13,8 @@ public class EnemyHit : MonoBehaviour
     private Rigidbody rigidBody;
     public GameManager gameManager;
 
+    public GameObject explosion;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +36,10 @@ public class EnemyHit : MonoBehaviour
 
         if (health <= 0)
         {
+            Instantiate(explosion, transform.position, Quaternion.identity);
+            GameManager.Instance.credits += 10;
+            //gameManager.credits += 10;
             Die();
-            gameManager.credits += 10;
         }
     }
 
