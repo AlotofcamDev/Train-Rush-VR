@@ -13,6 +13,7 @@ public class FireCannon : MonoBehaviour
     public GameObject bullet;
     public Shop shop;
 
+    public ParticleSystem particles;
 
     private bool canShoot = true;
 
@@ -45,9 +46,10 @@ public class FireCannon : MonoBehaviour
         GameObject bulletInst = Instantiate(bullet, transform.forward * barrelOffset + transform.position, Quaternion.identity);
         bulletInst.GetComponent<Rigidbody>().AddForce(transform.forward * shotStrength, ForceMode.Impulse);
 
+        particles.Play();
+
         // Start the cooldown coroutine
-        
-        if(shop.FasterShooting == false)
+        if (shop.FasterShooting == false)
         {
             StartCoroutine(Cooldown());
         }

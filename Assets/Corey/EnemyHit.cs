@@ -35,7 +35,7 @@ public class EnemyHit : MonoBehaviour
         if (health <= 0)
         {
             Die();
-            gameManager.credits = +10;
+            gameManager.credits += 10;
         }
     }
 
@@ -44,15 +44,25 @@ public class EnemyHit : MonoBehaviour
         Destroy(gameObject);
     }
 
+    /*
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-
         if (other.tag == "Bullet")
         {
             Vector3 knockbackDirection = other.GetComponent<Rigidbody>().velocity.normalized;
             TakeDamage(knockbackDirection);
             Destroy(other.gameObject);
+        }
+    }
+    */
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            Vector3 knockbackDirection = collision.gameObject.GetComponent<Rigidbody>().velocity.normalized;
+            Destroy(collision.gameObject);
+            TakeDamage(knockbackDirection);
         }
     }
 }
