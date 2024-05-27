@@ -14,7 +14,7 @@ public class GrabOutlineController : MonoBehaviour
     public float HighlightRange = 3.0f;
 
     private Outline outline;
-    private OVRGrabbable grabbable;
+    public OVRGrabbable grabbable;
     private List<OVRGrabber> collidingGrabbers = new List<OVRGrabber>();
 
     private void OnEnable()
@@ -29,6 +29,10 @@ public class GrabOutlineController : MonoBehaviour
         outline.OutlineColor = InteractableCloseByColor;
         outline.enabled = false;
         outline.enabled = true;
+        if (grabbable != null)
+        {
+            return;
+        }
         grabbable = GetComponent<OVRGrabbable>();
     }
 

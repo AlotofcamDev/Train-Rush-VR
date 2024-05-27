@@ -48,7 +48,7 @@ public class EnemyHit : MonoBehaviour
         Destroy(gameObject);
     }
 
-    /*
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Bullet")
@@ -58,8 +58,8 @@ public class EnemyHit : MonoBehaviour
             Destroy(other.gameObject);
         }
     }
-    */
-
+    
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bullet")
@@ -69,4 +69,5 @@ public class EnemyHit : MonoBehaviour
             TakeDamage(knockbackDirection);
         }
     }
+    */
 }
