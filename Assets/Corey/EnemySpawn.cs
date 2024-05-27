@@ -43,7 +43,7 @@ public class EnemySpawn : MonoBehaviour
         int clampedIndex = (int) Mathf.Clamp(waveCounter, 0, numToSpawn.Length - 1f);
         for (int i=0; i < numToSpawn[clampedIndex]; i++)
         {
-            float forwardsOffset = Random.Range(-2f, 2f);
+            float forwardsOffset = Random.Range(-4f, 4f);
 
             Vector3 pos;
             bool coinFlipHeads = Random.Range(0, 2) == 0;
