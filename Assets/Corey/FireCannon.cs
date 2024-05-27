@@ -14,6 +14,8 @@ public class FireCannon : MonoBehaviour
     public Shop shop;
 
     public ParticleSystem particles;
+    public float vibrationStrength = 0.5f;
+    public float vibrationDuration = 0.2f;
 
     private bool canShoot = true;
 
@@ -46,6 +48,8 @@ public class FireCannon : MonoBehaviour
         GameObject bulletInst = Instantiate(bullet, transform.forward * barrelOffset + transform.position, Quaternion.identity);
         bulletInst.GetComponent<Rigidbody>().AddForce(transform.forward * shotStrength, ForceMode.Impulse);
 
+        SimpleHapticVibrationManager.VibrateController(vibrationDuration, vibrationStrength, OVRInput.Controller.LTouch);
+        SimpleHapticVibrationManager.VibrateController(vibrationDuration, vibrationStrength, OVRInput.Controller.RTouch);
         particles.Play();
 
         // Start the cooldown coroutine

@@ -4979,6 +4979,8 @@ MonoBehaviour:
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
   shop: {fileID: 0}
   particles: {fileID: 0}
+  vibrationStrength: 0.5
+  vibrationDuration: 0.2
 --- !u!1 &8651846316460835393
 GameObject:
   m_ObjectHideFlags: 0
@@ -5691,12 +5693,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotStrength: 30
   barrelOffset: 4
-  cooldownTime: 0.25
+  cooldownTime: 0.5
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
   shop: {fileID: 0}
   particles: {fileID: 9203089920645953016}
+  vibrationStrength: 1
+  vibrationDuration: 0.1
 --- !u!1 &8651846317670885291
 GameObject:
   m_ObjectHideFlags: 0
@@ -6008,6 +6012,8 @@ MonoBehaviour:
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
   shop: {fileID: 0}
   particles: {fileID: 0}
+  vibrationStrength: 0.5
+  vibrationDuration: 0.2
 --- !u!4 &9194997077188646029 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 87a63fa3685a5af438ac6b5ce3c3a860, type: 3}
