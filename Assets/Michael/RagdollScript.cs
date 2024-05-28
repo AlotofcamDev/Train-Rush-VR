@@ -273,6 +273,8 @@ public class RagdollScript : MonoBehaviour
         isFading = true;
 
         warningLineTimer = 0;
+        damageWarningTimer = 0;
+        coalWarningTimer = 0;
     }
 
     public void ReleaseRagdoll()

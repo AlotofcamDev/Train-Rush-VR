@@ -8,6 +8,7 @@ public class TrainTimerDisplay : MonoBehaviour
 {
     public Furnace furnace;
     public Shop shop;
+    public RagdollScript ragdoll;
 
     public Slider trainPos;
 
@@ -66,6 +67,11 @@ public class TrainTimerDisplay : MonoBehaviour
             speedArrowSlow.SetActive(true);
             speedArrowMed.SetActive(false);
             speedArrowFast.SetActive(false);
+        }
+
+        if (trainDist <= 0f)
+        {
+            ragdoll.EndGame();
         }
     }
 }

@@ -19400,6 +19400,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1824693394573638835, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ability_FasterShooting
+      objectReference: {fileID: 0}
     - target: {fileID: 3302466835841514479, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
       propertyPath: m_Texture
       value: 
@@ -19492,6 +19496,10 @@ PrefabInstance:
       propertyPath: furnace
       value: 
       objectReference: {fileID: 157544994}
+    - target: {fileID: 3302466836323929676, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
+      propertyPath: ragdoll
+      value: 
+      objectReference: {fileID: 1554332465533896398}
     - target: {fileID: 3302466836323929676, guid: 04f39dd8a368ec14fb2f0fc1830bd0e6, type: 3}
       propertyPath: gameManager
       value: 
@@ -28237,7 +28245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2615747307447103630, guid: 4d75f678a75154d4b91d5de1e39214ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 2615747307447103630, guid: 4d75f678a75154d4b91d5de1e39214ed, type: 3}
       propertyPath: m_LocalPosition.z
@@ -30043,6 +30051,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnace: {fileID: 157544994}
   shop: {fileID: 938639257}
+  ragdoll: {fileID: 1554332465533896398}
   trainPos: {fileID: 2032370448}
   displayText: {fileID: 1465969419}
   speedArrowSlow: {fileID: 986826735}

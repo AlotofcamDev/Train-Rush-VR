@@ -14,6 +14,7 @@ public class Shop : MonoBehaviour
     public int BuyValue1 = 400;
     public int BuyValue2 = 300;
     public int BuyValue3 = 500;
+    public int BuyValue4 = 100;
 
     public Button Buy1;
     public Button Buy2;
@@ -22,6 +23,9 @@ public class Shop : MonoBehaviour
 
     public Furnace furnace;
     public GameManager gameManager;
+
+    // (M)
+    public RagdollScript ragdoll;
 
 
     // Start is called before the first frame update
@@ -42,6 +46,8 @@ public class Shop : MonoBehaviour
         {
             Buy1.interactable = false;
             BiggerExplosion = true;
+
+            ragdoll.GetUpgrade();
         }
         
     }
@@ -52,6 +58,8 @@ public class Shop : MonoBehaviour
         {
             Buy2.interactable = false;
             FasterTrain = true;
+
+            ragdoll.GetUpgrade();
         }
             
     }
@@ -62,6 +70,8 @@ public class Shop : MonoBehaviour
         {
             Buy3.interactable = false;
             ChunkierCoal = true;
+
+            ragdoll.GetUpgrade();
         }
         
     }
@@ -72,6 +82,8 @@ public class Shop : MonoBehaviour
         {
             Buy4.interactable = false;
             FasterShooting = true;
+
+            ragdoll.GetUpgrade();
         }
     }
 
