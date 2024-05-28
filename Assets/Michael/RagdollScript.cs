@@ -14,7 +14,13 @@ public class RagdollScript : MonoBehaviour
     public OVRScreenFade screenFade;
     public ParticleSystem furnaceFire;
 
+    public Rigidbody rb;
+    public float screamVelocity;
+
     public OVRGrabbableExtended grabbable;
+
+    //public GameManager gameManager;
+    public bool firstEnemyDestroyed = false;
 
     public AudioSource aSource;
     public List<AudioClip> voicelines = new List<AudioClip>();
@@ -46,6 +52,11 @@ public class RagdollScript : MonoBehaviour
     {
         //Debug.Log(aSource.isPlaying);
 
+        if (rb.velocity.magnitude >= screamVelocity)
+        {
+            Toss();
+        }
+
         if (isFading)
         {
             fadeTimer += Time.deltaTime;
@@ -61,6 +72,12 @@ public class RagdollScript : MonoBehaviour
                     SceneManager.LoadScene("MainMenu");
                 }
             }
+        }
+
+        if (GameManager.Instance.credits == 10 && firstEnemyDestroyed == false)
+        {
+            DestroyFirstEnemy();
+            firstEnemyDestroyed = true;
         }
     }
 

@@ -14135,6 +14135,7 @@ MonoBehaviour:
   leftMax: {fileID: 154723130}
   rightMin: {fileID: 954121729}
   rightMax: {fileID: 430253047}
+  ragdoll: {fileID: 0}
 --- !u!4 &483559752
 Transform:
   m_ObjectHideFlags: 0
@@ -33084,6 +33085,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 909830242}
+    - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: screenFade
       value: 
       objectReference: {fileID: 1327478389}
@@ -33091,12 +33096,21 @@ PrefabInstance:
       propertyPath: furnaceFire
       value: 
       objectReference: {fileID: 715086400}
+    - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: screamVelocity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1824926474443771443, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: m_Name
       value: Ragdoll
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+--- !u!54 &909830242 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1554332464355537035, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+  m_PrefabInstance: {fileID: 909830241}
+  m_PrefabAsset: {fileID: 0}
 --- !u!222 &927894902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -55066,6 +55080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnace: {fileID: 157544994}
   ragdoll: {fileID: 460559365}
+  firstCoalTriggered: 0
 --- !u!1 &1807803193
 GameObject:
   m_ObjectHideFlags: 0
@@ -57881,6 +57896,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   furnace: {fileID: 157544994}
   ragdoll: {fileID: 0}
+  firstCoalTriggered: 0
 --- !u!1 &2006760284
 GameObject:
   m_ObjectHideFlags: 0

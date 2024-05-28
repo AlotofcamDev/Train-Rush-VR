@@ -7245,6 +7245,7 @@ MonoBehaviour:
   leftMax: {fileID: 154723130}
   rightMin: {fileID: 954121729}
   rightMax: {fileID: 430253047}
+  ragdoll: {fileID: 1554332465533896398}
 --- !u!4 &483559752
 Transform:
   m_ObjectHideFlags: 0
@@ -39235,6 +39236,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: rb
+      value: 
+      objectReference: {fileID: 1554332465533896403}
+    - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: isIntro
       value: 0
       objectReference: {fileID: 0}
@@ -39246,6 +39251,10 @@ PrefabInstance:
       propertyPath: furnaceFire
       value: 
       objectReference: {fileID: 715086400}
+    - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: screamVelocity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1824926474443771443, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: m_Name
       value: Ragdoll
@@ -39263,6 +39272,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd45be7c6334b8542918aa1c0a1accb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!54 &1554332465533896403 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 1554332464355537035, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+  m_PrefabInstance: {fileID: 1554332465533896397}
+  m_PrefabAsset: {fileID: 0}
 --- !u!23 &1774124387863638904
 MeshRenderer:
   m_ObjectHideFlags: 0
