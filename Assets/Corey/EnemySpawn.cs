@@ -18,6 +18,9 @@ public class EnemySpawn : MonoBehaviour
     public Transform rightMin;
     public Transform rightMax;
 
+    // (M)
+    public RagdollScript ragdoll;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,12 @@ public class EnemySpawn : MonoBehaviour
             waveCounter++;
             waveInterval *= 0.95f; // Slowly make waves appear quicker
             waveTimer = 0f;
+
+            // (M)
+            if (waveCounter == 1)
+            {
+                ragdoll.FirstEnemy();
+            }
         }
     }
 

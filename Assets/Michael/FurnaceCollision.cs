@@ -7,6 +7,7 @@ public class FurnaceCollision : MonoBehaviour
     public Furnace furnace;
 
     public RagdollScript ragdoll;
+    public bool firstCoalTriggered = false;
 
     void OnTriggerEnter(Collider other)
     {
@@ -14,6 +15,12 @@ public class FurnaceCollision : MonoBehaviour
         {
             furnace.HealDamage(20);
             Destroy(other.gameObject);
+
+            if (!firstCoalTriggered)
+            {
+                ragdoll.FirstCoal();
+                firstCoalTriggered = true;
+            }
         }
         else if (other.tag == "Ragdoll")
         {

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class RagdollScript : MonoBehaviour
 {
@@ -13,13 +14,16 @@ public class RagdollScript : MonoBehaviour
     public OVRScreenFade screenFade;
     public ParticleSystem furnaceFire;
 
+    public OVRGrabbableExtended grabbable;
+
     public AudioSource aSource;
     public List<AudioClip> voicelines = new List<AudioClip>();
 
     // Start is called before the first frame update
     void Start()
     {
-        aSource = GetComponent<AudioSource>();
+        // aSource = GetComponent<AudioSource>();
+        // grabbable = GetComponent<OVRGrabbableExtended>();
 
         if (isIntro)
         {
@@ -68,6 +72,14 @@ public class RagdollScript : MonoBehaviour
             Debug.Log("What's up boss? I'll be your helper doll for this trip. Don't worry, I'll only bug you if we're in danger... or if I get bored.");
             Debug.Log("We should get moving, we've got passengers to move across. I know this'll be weird, but toss me in that furnace and I'll get this train started");
             aSource.clip = voicelines[12];
+            aSource.Play();
+        }
+        else
+        {
+            Debug.Log("Hey, boss!");
+            Debug.Log("Hiya!");
+            // Clip 10 or 11
+            aSource.clip = voicelines[Random.Range(10, 12)];
             aSource.Play();
         }
     }

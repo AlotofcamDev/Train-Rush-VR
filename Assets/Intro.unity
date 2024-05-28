@@ -13807,6 +13807,17 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &460559365 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+  m_PrefabInstance: {fileID: 909830241}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd45be7c6334b8542918aa1c0a1accb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &462499997
 GameObject:
   m_ObjectHideFlags: 0
@@ -33071,18 +33082,6 @@ PrefabInstance:
     - target: {fileID: 1303968397056087177, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1554332464355537025, guid: a06c6726242ccfc4e871804f01430171, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1554332464355537025, guid: a06c6726242ccfc4e871804f01430171, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 0eb2661ae16a13344bae7a08aecc6858, type: 3}
-    - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
-      propertyPath: isIntro
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: screenFade
@@ -55066,7 +55065,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   furnace: {fileID: 157544994}
-  ragdoll: {fileID: 0}
+  ragdoll: {fileID: 460559365}
 --- !u!1 &1807803193
 GameObject:
   m_ObjectHideFlags: 0

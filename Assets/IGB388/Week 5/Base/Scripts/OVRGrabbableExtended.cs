@@ -6,10 +6,11 @@ using UnityEngine.Events;
 
 public class OVRGrabbableExtended : OVRGrabbable
 {
-    [HideInInspector] public UnityEvent OnGrabBegin;
-    [HideInInspector] public UnityEvent OnGrabEnd;
-    [HideInInspector] public UnityEvent OnEnterGrabRange;
-    [HideInInspector] public UnityEvent OnExitGrabRange;
+    //[HideInInspector] public UnityEvent OnGrabBegin;
+    public UnityEvent OnGrabBegin;
+    public UnityEvent OnGrabEnd;
+    public UnityEvent OnEnterGrabRange;
+    public UnityEvent OnExitGrabRange;
 
     public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {

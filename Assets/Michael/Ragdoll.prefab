@@ -129,7 +129,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0eb2661ae16a13344bae7a08aecc6858, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -234,7 +234,19 @@ MonoBehaviour:
   m_grabPoints: []
   OnGrabBegin:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1554332464355537029}
+        m_TargetAssemblyTypeName: RagdollScript, Assembly-CSharp
+        m_MethodName: Pickup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnGrabEnd:
     m_PersistentCalls:
       m_Calls: []
@@ -256,12 +268,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd45be7c6334b8542918aa1c0a1accb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isIntro: 0
+  isIntro: 1
   isFading: 0
   fadeTime: 2
   screenFade: {fileID: 0}
   furnaceFire: {fileID: 0}
-  aSource: {fileID: 0}
+  grabbable: {fileID: 1554332464355537034}
+  aSource: {fileID: 1554332464355537025}
   voicelines:
   - {fileID: 8300000, guid: 396ecb92ba4e960408d4aa877fc01bd0, type: 3}
   - {fileID: 8300000, guid: 032ee1c5b441298489278d7f568aaecc, type: 3}
