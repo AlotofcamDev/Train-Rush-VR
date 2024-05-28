@@ -64,6 +64,7 @@ public class EnemySpawn : MonoBehaviour
                 pos = new Vector3(Random.Range(rightMin.position.x, rightMax.position.x), spawnHere.position.y, spawnHere.position.z + forwardsOffset);
             }
             Instantiate(enemyPrefab, pos, Quaternion.identity);
+            enemyPrefab.GetComponent<EnemyMovement>().isRightSide = coinFlipHeads;
         }
     }
 }

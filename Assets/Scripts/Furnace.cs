@@ -15,6 +15,7 @@ public class Furnace : MonoBehaviour
 
     public HealthBar healthBar;
     public Shop shop;
+    public RagdollScript ragdoll;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +34,11 @@ public class Furnace : MonoBehaviour
         {
             TakeDamage(20);
             timer = timerMax;
+        }
+
+        if (ragdoll != null && currentHealth <= maxHealth / 5)
+        {
+            ragdoll.CoalLow();
         }
     }
 

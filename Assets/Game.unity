@@ -1641,6 +1641,7 @@ MonoBehaviour:
   timer: 30
   healthBar: {fileID: 1532467610763009219}
   shop: {fileID: 938639257}
+  ragdoll: {fileID: 1554332465533896398}
 --- !u!1 &185279811
 GameObject:
   m_ObjectHideFlags: 0

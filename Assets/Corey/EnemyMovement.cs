@@ -19,6 +19,11 @@ public class EnemyMovement : MonoBehaviour
 
     private Rigidbody rigidBody;
 
+    // (M)
+    public bool isRightSide;
+    public bool closeEnoughForWarning = false;
+    private RagdollScript ragdoll;
+
     // Link to furnace
     private Furnace furnace;
     private float speedMult;
@@ -27,6 +32,9 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("EnemyTarget").transform;
+
+        // (M)
+        ragdoll = GameObject.Find("RagdollMesh").GetComponent<RagdollScript>();
 
         rigidBody = GetComponent<Rigidbody>();
         startPos = transform.position;
@@ -41,6 +49,21 @@ public class EnemyMovement : MonoBehaviour
         speedMult = 1.5f - ((furnace.currentHealth + furnace.maxHealth) / (2f * furnace.maxHealth));
 
         closeEnoughToAttack = transform.position.z >= target.position.z - 2f;
+
+        // (M)
+        if (transform.position.z >= target.position.z - -12f && !closeEnoughForWarning)
+        {
+            if (isRightSide)
+            {
+                ragdoll.EnemyStarboard();
+            }
+            else
+            {
+                ragdoll.EnemyPort();
+            }
+
+            closeEnoughForWarning = true;
+        }
     }
 
     private void FixedUpdate()

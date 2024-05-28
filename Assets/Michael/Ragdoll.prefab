@@ -290,6 +290,7 @@ MonoBehaviour:
   isGrabbed: 0
   grabbable: {fileID: 1554332464355537034}
   firstEnemyDestroyed: 0
+  warningLineTime: 10
   aSource: {fileID: 1554332464355537025}
   voicelines:
   - {fileID: 8300000, guid: 396ecb92ba4e960408d4aa877fc01bd0, type: 3}

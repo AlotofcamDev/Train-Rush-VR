@@ -4914,7 +4914,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   acceleration: 100
-  topSpeed: 10
+  topSpeed: 6
   targetSpeed: 0
   closeEnoughToAttack: 0
 --- !u!114 &-1528927577456127414
