@@ -52,6 +52,7 @@ public class RagdollScript : MonoBehaviour
         else
         {
             Debug.Log("See? Totally fine. We're on our way! Chuck some coal in the furnace to keep us going!");
+            isTossed = true;
             aSource.clip = voicelines[9];
             aSource.Play();
         }
@@ -127,6 +128,13 @@ public class RagdollScript : MonoBehaviour
         if (isIntro)
         {
             Debug.Log("Ahhh! HOTHOTHOTHOT!!!!");
+
+            rb.useGravity = false;
+            rb.velocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+            this.GetComponent<MeshRenderer>().enabled = false;
+            this.GetComponent<MeshCollider>().enabled = false;
+
             aSource.clip = voicelines[8];
             aSource.Play();
 
