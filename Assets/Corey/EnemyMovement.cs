@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody rigidBody;
 
     // (M)
-    public bool isRightSide;
+    public bool isLeftSide;
     public bool closeEnoughForWarning = false;
     private RagdollScript ragdoll;
 
@@ -51,9 +51,9 @@ public class EnemyMovement : MonoBehaviour
         closeEnoughToAttack = transform.position.z >= target.position.z - 2f;
 
         // (M)
-        if (transform.position.z >= target.position.z - -12f && !closeEnoughForWarning)
+        if (transform.position.z >= target.position.z - 15f && !closeEnoughForWarning)
         {
-            if (isRightSide)
+            if (isLeftSide)
             {
                 ragdoll.EnemyStarboard();
             }

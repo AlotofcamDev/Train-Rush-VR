@@ -24,7 +24,12 @@ public class RagdollScript : MonoBehaviour
     public bool firstEnemyDestroyed = false;
 
     public float warningLineTime;
+    public float coalWarningTime;
+    public float damageWarningTime;
+
     private float warningLineTimer = 0;
+    private float coalWarningTimer = 0;
+    private float damageWarningTimer = 0;
 
     public AudioSource aSource;
     public List<AudioClip> voicelines = new List<AudioClip>();
@@ -85,6 +90,8 @@ public class RagdollScript : MonoBehaviour
         }
 
         warningLineTimer += Time.deltaTime;
+        coalWarningTimer += Time.deltaTime;
+        damageWarningTimer += Time.deltaTime;
     }
 
     // Intro dialogue
@@ -155,11 +162,12 @@ public class RagdollScript : MonoBehaviour
     // Game gameplay loop dialogue
     public void EnemyPort()
     {
-        Debug.Log("Enemies port side!");
-        Debug.Log("Port side, boss!");
         // Clip 14 or 15
         if (warningLineTimer > warningLineTime)
         {
+            Debug.Log("Enemies port side!");
+            Debug.Log("Port side, boss!");
+
             aSource.clip = voicelines[Random.Range(14, 16)];
             aSource.Play();
 
@@ -169,11 +177,12 @@ public class RagdollScript : MonoBehaviour
 
     public void EnemyStarboard()
     {
-        Debug.Log("Enemies starboard side!");
-        Debug.Log("Starboard side, boss!");
         // Clip 23 or 24
         if (warningLineTimer > warningLineTime)
         {
+            Debug.Log("Enemies starboard side!");
+            Debug.Log("Starboard side, boss!");
+
             aSource.clip = voicelines[Random.Range(23, 25)];
             aSource.Play();
 
@@ -183,33 +192,43 @@ public class RagdollScript : MonoBehaviour
 
     public void DamagePort()
     {
-        Debug.Log("Taking damage port side!");
-        aSource.clip = voicelines[13];
-        aSource.Play();
+        if (warningLineTimer > warningLineTime && !isIntro && coalWarningTimer > coalWarningTime)
+        {
+            Debug.Log("Taking damage port side!");
+            aSource.clip = voicelines[13];
+            aSource.Play();
 
-        warningLineTimer = 0;
+            warningLineTimer = 0;
+            damageWarningTimer = 0;
+        }
     }
 
     public void DamageStarboard()
     {
-        Debug.Log("Taking damage starboard side!");
-        aSource.clip = voicelines[22];
-        aSource.Play();
+        if (warningLineTimer > warningLineTime && !isIntro && coalWarningTimer > coalWarningTime)
+        {
+            Debug.Log("Taking damage starboard side!");
+            aSource.clip = voicelines[22];
+            aSource.Play();
 
-        warningLineTimer = 0;
+            warningLineTimer = 0;
+            damageWarningTimer = 0;
+        }
     }
 
     public void CoalLow()
     {
-        Debug.Log("Our coal's running low, boss!");
-        Debug.Log("We're slowing down, add some coal!");
         // Clip 0 or 1
-        if (warningLineTimer > warningLineTime && !isIntro)
+        if (warningLineTimer > warningLineTime && !isIntro && coalWarningTimer > coalWarningTime)
         {
+            Debug.Log("Our coal's running low, boss!");
+            Debug.Log("We're slowing down, add some coal!");
+
             aSource.clip = voicelines[Random.Range(0, 2)];
             aSource.Play();
 
             warningLineTimer = 0;
+            coalWarningTimer = 0;
         }
     }
 
@@ -218,6 +237,9 @@ public class RagdollScript : MonoBehaviour
         Debug.Log("We can't hold much longer!");
         aSource.clip = voicelines[2];
         aSource.Play();
+
+        warningLineTimer = 0;
+        damageWarningTimer = 0;
     }
 
     public void GetUpgrade()
