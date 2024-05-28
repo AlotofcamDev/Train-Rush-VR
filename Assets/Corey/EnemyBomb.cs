@@ -26,6 +26,8 @@ public class EnemyBomb : MonoBehaviour
             // do sfx and other fx
             other.GetComponent<TrainHealth>().takeDamage(damage);
             Instantiate(explosion, transform.position, Quaternion.identity);
+            SimpleHapticVibrationManager.VibrateController(0.1f, 0.2f, OVRInput.Controller.LTouch);
+            SimpleHapticVibrationManager.VibrateController(0.1f, 0.2f, OVRInput.Controller.RTouch);
             Destroy(gameObject);
         }
     }
