@@ -14112,7 +14112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &483559751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33098,7 +33098,35 @@ PrefabInstance:
       objectReference: {fileID: 715086400}
     - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: screamVelocity
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537034, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: OnGrabEnd.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537034, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: OnGrabEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537034, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: OnGrabEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 460559365}
+    - target: {fileID: 1554332464355537034, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: OnGrabEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537034, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: OnGrabEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReleaseRagdoll
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537034, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: OnGrabEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RagdollScript, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537034, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: OnGrabEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1824926474443771443, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: m_Name

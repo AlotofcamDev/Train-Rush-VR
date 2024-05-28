@@ -16,6 +16,7 @@ public class RagdollScript : MonoBehaviour
 
     public Rigidbody rb;
     public float screamVelocity;
+    public bool isGrabbed = false;
 
     public OVRGrabbableExtended grabbable;
 
@@ -52,7 +53,7 @@ public class RagdollScript : MonoBehaviour
     {
         //Debug.Log(aSource.isPlaying);
 
-        if (rb.velocity.magnitude >= screamVelocity)
+        if (rb.velocity.magnitude >= screamVelocity && !isGrabbed)
         {
             Toss();
         }
@@ -84,6 +85,8 @@ public class RagdollScript : MonoBehaviour
     // Intro dialogue
     public void Pickup()
     {
+        isGrabbed = true;
+
         if (isIntro)
         {
             Debug.Log("What's up boss? I'll be your helper doll for this trip. Don't worry, I'll only bug you if we're in danger... or if I get bored.");
@@ -218,5 +221,10 @@ public class RagdollScript : MonoBehaviour
 
         screenFade.FadeOut();
         isFading = true;
+    }
+
+    public void ReleaseRagdoll()
+    {
+        isGrabbed = false;
     }
 }
