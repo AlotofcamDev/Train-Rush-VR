@@ -227,4 +227,9 @@ public class RagdollScript : MonoBehaviour
     {
         isGrabbed = false;
     }
+
+    public void StopDialogue()
+    {
+        aSource.Stop();
+    }
 }

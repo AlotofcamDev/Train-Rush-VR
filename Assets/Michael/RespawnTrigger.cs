@@ -12,6 +12,7 @@ public class RespawnTrigger : MonoBehaviour
         {
             other.transform.position = ragdollSpawn.position;
             other.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            other.GetComponent<RagdollScript>().StopDialogue();
         }
     }
 }

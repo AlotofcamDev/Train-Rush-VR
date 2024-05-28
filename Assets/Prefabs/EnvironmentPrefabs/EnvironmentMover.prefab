@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   environmentPrefabs:
   - {fileID: 7507684900769085622, guid: e28e3db7f224a34459943a79ccfc177d, type: 3}
+  - {fileID: 7507684900769085622, guid: 33ce2ac30b81baf4ea060349ef1781c7, type: 3}
   environmentActives: []
   environmentCount: 6
   environmentZShift: 50
