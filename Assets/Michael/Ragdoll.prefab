@@ -286,7 +286,7 @@ MonoBehaviour:
   screenFade: {fileID: 0}
   furnaceFire: {fileID: 0}
   rb: {fileID: 0}
-  screamVelocity: 1
+  screamVelocity: 4.5
   isGrabbed: 0
   grabbable: {fileID: 1554332464355537034}
   firstEnemyDestroyed: 0

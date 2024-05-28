@@ -17,6 +17,7 @@ public class RagdollScript : MonoBehaviour
     public Rigidbody rb;
     public float screamVelocity;
     public bool isGrabbed = false;
+    public bool isTossed = false;
 
     public OVRGrabbableExtended grabbable;
 
@@ -61,9 +62,14 @@ public class RagdollScript : MonoBehaviour
     {
         //Debug.Log(aSource.isPlaying);
 
-        if (rb.velocity.magnitude >= screamVelocity && !isGrabbed)
+        if (rb.velocity.magnitude >= screamVelocity && !isGrabbed && !isTossed)
         {
             Toss();
+            isTossed = true;
+        }
+        else if (rb.velocity.magnitude < screamVelocity)
+        {
+            isTossed = false;
         }
 
         if (isFading)
