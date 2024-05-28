@@ -60,10 +60,10 @@ public class FireCannon : MonoBehaviour
         fireTimer = 0f;
 
         // Start the cooldown coroutine
-        if (shop.FasterShooting == false)
-        {
-            StartCoroutine(Cooldown());
-        }
+        //if (shop.FasterShooting == false)
+        //{
+        //    StartCoroutine(Cooldown());
+        //}
         
     }
 

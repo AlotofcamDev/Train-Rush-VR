@@ -160,3 +160,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 5
+  explosion: {fileID: 7790049730590388140, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}

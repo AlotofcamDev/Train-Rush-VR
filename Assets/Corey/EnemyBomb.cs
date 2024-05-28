@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyBomb : MonoBehaviour
 {
     public float damage;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class EnemyBomb : MonoBehaviour
         {
             // do sfx and other fx
             other.GetComponent<TrainHealth>().takeDamage(damage);
+            Instantiate(explosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

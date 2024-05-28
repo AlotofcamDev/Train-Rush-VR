@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7790049730590388140}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35,7 +35,7 @@ Transform:
   - {fileID: 7525972304134360704}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &8863455302572874656
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 200
+      scalar: 150
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -226,7 +226,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 0.4117647}
+      maxColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 0.078431375}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -288,8 +288,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.5
-      minScalar: 1
+      scalar: 2.5
+      minScalar: 1.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -671,7 +671,7 @@ ParticleSystem:
     radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
+    m_Rotation: {x: -90, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
@@ -980,7 +980,7 @@ ParticleSystem:
       countCurve:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 60
+        scalar: 40
         minScalar: 30
         maxCurve:
           serializedVersion: 2
@@ -1366,9 +1366,9 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 0.078431375}
+        key0: {r: 1, g: 1, b: 1, a: 0.53333336}
         key1: {r: 0.7924528, g: 0.7924528, b: 0.7924528, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -1382,9 +1382,9 @@ ParticleSystem:
         ctime5: 0
         ctime6: 0
         ctime7: 0
-        atime0: 5783
-        atime1: 42020
-        atime2: 65535
+        atime0: 0
+        atime1: 10409
+        atime2: 42020
         atime3: 65535
         atime4: 65535
         atime5: 0
@@ -1392,7 +1392,7 @@ ParticleSystem:
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 2
-        m_NumAlphaKeys: 3
+        m_NumAlphaKeys: 4
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -2690,7 +2690,7 @@ ParticleSystem:
     drag:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.05
+      scalar: 0.07
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4885,7 +4885,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bf89a5f8b959c44aba8dfdf8cf495de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  despawnTime: 20
+  despawnTime: 10
 --- !u!114 &8002937428392894286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5126,8 +5126,8 @@ ParticleSystem:
       maxColor: {r: 0.9245283, g: 0.5703955, b: 0.21368816, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 0.9011099, b: 0.6179246, a: 1}
-        key1: {r: 1, g: 0.5955457, b: 0.47450984, a: 1}
+        key0: {r: 1, g: 0.86019254, b: 0.4575472, a: 1}
+        key1: {r: 1, g: 0.5177767, b: 0.3726415, a: 1}
         key2: {r: 1, g: 1, b: 1, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -5508,8 +5508,8 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 3
-      scalar: -0.05
-      minScalar: 0
+      scalar: -0.6
+      minScalar: -0.3
       maxCurve:
         serializedVersion: 2
         m_Curve:
