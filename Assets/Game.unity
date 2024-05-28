@@ -50691,7 +50691,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6279243742496530715, guid: 15b8a97229929514e8770a963c2d050f, type: 3}
       propertyPath: environmentCount
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6279243742520729472, guid: 15b8a97229929514e8770a963c2d050f, type: 3}
       propertyPath: m_Mesh
