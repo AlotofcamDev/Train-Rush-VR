@@ -19,11 +19,15 @@ public class RagdollScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        aSource = GetComponent<AudioSource>();
+
         if (isIntro)
         {
             Debug.Log("Hey! You there! You must be the new conductor! I'm the little guy on the shelf in front of you. Can you... pick me up real quick? While you're holding me, I'll show you around.");
-            aSource.Stop();
-            aSource.PlayOneShot(voicelines[7]);
+            aSource.clip = voicelines[7];
+            aSource.Play();
+            //aSource.Stop();
+            //aSource.PlayOneShot(voicelines[7]);
         }
         else
         {
@@ -36,6 +40,8 @@ public class RagdollScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Debug.Log(aSource.isPlaying);
+
         if (isFading)
         {
             fadeTimer += Time.deltaTime;
