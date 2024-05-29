@@ -63,7 +63,7 @@ public class Furnace : MonoBehaviour
             currentHealth += heal + 10;
             healthBar.SetFurnaceHealth(currentHealth);
         }
-        
+        currentHealth = (int) Mathf.Clamp(currentHealth, 0f, maxHealth);
         
     }
 

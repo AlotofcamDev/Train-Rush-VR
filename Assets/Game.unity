@@ -7074,9 +7074,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 6360574153242271205, guid: 2d67867c52b04a745a3811575037f04e, type: 3}
   waveInterval: 30
-  waveTimer: 0
+  waveTimer: 10
   waveCounter: 0
-  numToSpawn: 010000000300000005000000090000000f000000
+  numToSpawn: 020000000400000007000000090000000c0000000f000000
   spawnHere: {fileID: 824375970}
   leftMin: {fileID: 19452898}
   leftMax: {fileID: 154723130}
@@ -39083,7 +39083,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1554332464355537025, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: MaxDistance
-      value: 15
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537025, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: MinDistance
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: rb
