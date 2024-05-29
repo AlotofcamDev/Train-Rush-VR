@@ -33109,6 +33109,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537025, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1554332464355537025, guid: a06c6726242ccfc4e871804f01430171, type: 3}
+      propertyPath: spreadCustomCurve.m_Curve.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1554332464355537029, guid: a06c6726242ccfc4e871804f01430171, type: 3}
       propertyPath: rb
       value: 
@@ -42204,7 +42212,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2615747307447103630, guid: 4d75f678a75154d4b91d5de1e39214ed, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2615747307447103630, guid: 4d75f678a75154d4b91d5de1e39214ed, type: 3}
       propertyPath: m_LocalRotation.y
@@ -42212,7 +42220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2615747307447103630, guid: 4d75f678a75154d4b91d5de1e39214ed, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2615747307447103630, guid: 4d75f678a75154d4b91d5de1e39214ed, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
