@@ -13,6 +13,8 @@ public class FurnaceCollision : MonoBehaviour
     {
         if (other.tag == "Coal")
         {
+            if (IsHeld(other)) return;
+
             furnace.HealDamage(20);
             Destroy(other.gameObject);
 
@@ -24,7 +26,23 @@ public class FurnaceCollision : MonoBehaviour
         }
         else if (other.tag == "Ragdoll")
         {
+            if (IsHeld(other)) return;
+
             ragdoll.Kindling();
         }
+    }
+
+    private bool IsHeld(Collider other)
+    {
+        CustomGrabbable ovrGrab = other.GetComponentInChildren<CustomGrabbable>();
+        if (ovrGrab == null)
+        {
+            return true;
+        }
+        if (ovrGrab.isGrabbed)
+        {
+            return true;
+        }
+        return false;
     }
 }
