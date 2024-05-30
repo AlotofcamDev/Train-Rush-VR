@@ -9844,7 +9844,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotStrength: 30
   barrelOffset: 3
-  cooldownTime: 0.25
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
@@ -10565,7 +10564,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotStrength: 30
   barrelOffset: 4
-  cooldownTime: 0.5
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
@@ -10573,7 +10571,7 @@ MonoBehaviour:
   particles: {fileID: 9203089920645953016}
   vibrationStrength: 1
   vibrationDuration: 0.1
-  fireRate: 0.5
+  fireRate: 0.6
 --- !u!1 &8651846317670885291
 GameObject:
   m_ObjectHideFlags: 0
@@ -10966,7 +10964,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotStrength: 30
   barrelOffset: 5
-  cooldownTime: 0.25
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}

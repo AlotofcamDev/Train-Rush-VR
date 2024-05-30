@@ -6,20 +6,18 @@ public class FireCannon : MonoBehaviour
 {
     public float shotStrength;
     public float barrelOffset;
-    public float cooldownTime = 0.25f; // Cooldown time in seconds
 
     public DiegeticRotator left;
     public DiegeticRotator right;
     public GameObject bullet;
-    public Shop shop;
 
     public ParticleSystem particles;
     public float vibrationStrength = 0.5f;
     public float vibrationDuration = 0.2f;
 
-    private bool canShoot = true;
+    private bool canShoot => fireTimer > fireRate;
 
-    public float fireRate = 0.5f;
+    public float fireRate = 0.6f;
     private float fireTimer;
 
     // Start is called before the first frame update
@@ -31,7 +29,7 @@ public class FireCannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        FireCooldown();
+        fireTimer += Time.deltaTime;
 
         // Check if both controllers are grabbed and either index trigger is pressed
         if (left.isGrabbed && right.isGrabbed && canShoot &&
@@ -58,28 +56,10 @@ public class FireCannon : MonoBehaviour
         particles.Play();
 
         fireTimer = 0f;
-
-        // Start the cooldown coroutine
-        //if (shop.FasterShooting == false)
-        //{
-        //    StartCoroutine(Cooldown());
-        //}
-        
     }
 
-    private IEnumerator Cooldown()
+    public void ActivateFasterShooting()
     {
-        // Set canShoot to false and wait for the cooldown time
-        canShoot = false;
-        yield return new WaitForSeconds(cooldownTime);
-        // After the wait, set canShoot to true again
-        canShoot = true;
-    }
-
-    private void FireCooldown()
-    {
-        fireTimer += Time.deltaTime;
-
-        canShoot = fireTimer > fireRate;
+        fireRate = 0.3f;
     }
 }
