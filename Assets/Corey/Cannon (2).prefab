@@ -9847,7 +9847,6 @@ MonoBehaviour:
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
-  shop: {fileID: 0}
   particles: {fileID: 0}
   vibrationStrength: 0.5
   vibrationDuration: 0.2
@@ -10567,7 +10566,6 @@ MonoBehaviour:
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
-  shop: {fileID: 0}
   particles: {fileID: 9203089920645953016}
   vibrationStrength: 1
   vibrationDuration: 0.1
@@ -10863,10 +10861,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -6636569964863955296, guid: 87a63fa3685a5af438ac6b5ce3c3a860, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 38471b3c38c7b3341b57bf42c61290c1, type: 2}
+    - target: {fileID: -3334479249560807378, guid: 87a63fa3685a5af438ac6b5ce3c3a860, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 38471b3c38c7b3341b57bf42c61290c1, type: 2}
     - target: {fileID: 919132149155446097, guid: 87a63fa3685a5af438ac6b5ce3c3a860, type: 3}
       propertyPath: m_Name
       value: Cannon (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7398601587897848818, guid: 87a63fa3685a5af438ac6b5ce3c3a860, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: b0aa880c3e529bf46a1929deca0dae85, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a63fa3685a5af438ac6b5ce3c3a860, type: 3}
 --- !u!1 &2059714868220370345 stripped
@@ -10967,7 +10977,6 @@ MonoBehaviour:
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
-  shop: {fileID: 0}
   particles: {fileID: 0}
   vibrationStrength: 0.5
   vibrationDuration: 0.2

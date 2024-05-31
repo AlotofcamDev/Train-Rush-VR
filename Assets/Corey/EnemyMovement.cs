@@ -64,8 +64,20 @@ public class EnemyMovement : MonoBehaviour
 
             closeEnoughForWarning = true;
         }
+
+        // Movement physics
+        targetSpeed = topSpeed * ((target.position.z - transform.position.z) / (target.position.z - startPos.z)) * speedMult;
+
+        Vector3 force = movementDirection * acceleration * Time.deltaTime;
+        rigidBody.AddForce(force);
+
+        float clampedSpeed = Mathf.Clamp(rigidBody.velocity.z, -20f * topSpeed, targetSpeed);
+        rigidBody.velocity = movementDirection * clampedSpeed;
+
+        //Debug.Log(rigidBody.velocity);
     }
 
+    /*
     private void FixedUpdate()
     {
         targetSpeed = topSpeed * ((target.position.z - transform.position.z) / (target.position.z - startPos.z)) * speedMult;
@@ -75,5 +87,8 @@ public class EnemyMovement : MonoBehaviour
 
         float clampedSpeed = Mathf.Clamp(rigidBody.velocity.z, -20f*topSpeed, targetSpeed);
         rigidBody.velocity = movementDirection * clampedSpeed;
+
+        Debug.Log(rigidBody.velocity);
     }
+    */
 }
