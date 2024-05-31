@@ -26,7 +26,9 @@ public class FurnaceCollision : MonoBehaviour
         }
         else if (other.tag == "Ragdoll")
         {
-            if (IsHeld(other)) return;
+            //if (IsHeld(other)) return;
+
+            Debug.Log("Ragdoll In Furnace");
 
             ragdoll.Kindling();
         }
@@ -35,6 +37,7 @@ public class FurnaceCollision : MonoBehaviour
     private bool IsHeld(Collider other)
     {
         CustomGrabbable ovrGrab = other.GetComponentInChildren<CustomGrabbable>();
+        //VRGrabbableExtended ovrGrabExt = other.GetComponentInChildren<OVRGrabbableExtended>();
         if (ovrGrab == null)
         {
             return true;
