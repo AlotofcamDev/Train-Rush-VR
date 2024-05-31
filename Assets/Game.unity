@@ -6845,7 +6845,7 @@ MonoBehaviour:
   waveInterval: 30
   waveTimer: 10
   waveCounter: 0
-  numToSpawn: 020000000400000007000000090000000a0000000b000000
+  numToSpawn: 010000000400000007000000090000000a0000000b000000
   spawnHere: {fileID: 824375970}
   leftMin: {fileID: 19452898}
   leftMax: {fileID: 154723130}
@@ -15796,7 +15796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 824375969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -8.35, z: -60}
+  m_LocalPosition: {x: 0, y: -8.7, z: -60}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22487,9 +22487,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d80d1d6e43017840adc4336922787e0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bb377d85b0f2081449c80c4c0fdcc11e, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

@@ -9,6 +9,9 @@ public class TrainHealth : MonoBehaviour
     public float startHealth;
     public float health;
 
+    // (M)
+    //public AudioSource aSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +22,7 @@ public class TrainHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //aSource.
     }
 
     public void takeDamage(float damage)
