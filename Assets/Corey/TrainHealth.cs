@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
+using TMPro;
 
 public class TrainHealth : MonoBehaviour
 {
@@ -10,7 +12,9 @@ public class TrainHealth : MonoBehaviour
     public float health;
 
     // (M)
-    //public AudioSource aSource;
+    public Slider healthDisplay;
+    public TextMeshProUGUI healthText;
+    public RagdollScript ragdoll;
 
     // Start is called before the first frame update
     void Start()
@@ -33,5 +37,12 @@ public class TrainHealth : MonoBehaviour
         {
             Debug.Log("Game end");
         }
+        else if (health <= 20f)
+        {
+            ragdoll.HealthLow();
+        }
+
+        healthDisplay.value = health;
+        healthText.text = "Train Integrity: " + health + "%";
     }
 }
