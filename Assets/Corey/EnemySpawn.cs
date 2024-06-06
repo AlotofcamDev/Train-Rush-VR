@@ -5,6 +5,9 @@ public class EnemySpawn : MonoBehaviour
 {
     public GameObject enemyPrefab;
 
+    public int maxEnemies = 20;
+    public int enemyCount = 0;
+
     public float waveInterval;
     public float waveTimer;
     public int waveCounter;
@@ -24,7 +27,7 @@ public class EnemySpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        EnemyHit.onDestroyEnemy += RemoveEnemy;
     }
 
     // Update is called once per frame
@@ -52,6 +55,10 @@ public class EnemySpawn : MonoBehaviour
         int clampedIndex = (int) Mathf.Clamp(waveCounter, 0, numToSpawn.Length - 1f);
         for (int i=0; i < numToSpawn[clampedIndex]; i++)
         {
+            if (enemyCount >= maxEnemies) return;
+
+            AddEnemy();
+
             float forwardsOffset = Random.Range(-4f, 4f);
 
             Vector3 pos;
@@ -66,5 +73,15 @@ public class EnemySpawn : MonoBehaviour
             Instantiate(enemyPrefab, pos, Quaternion.identity);
             enemyPrefab.GetComponent<EnemyMovement>().isLeftSide = coinFlipHeads;
         }
+    }
+
+    private void AddEnemy()
+    {
+        enemyCount++;
+    }
+
+    private void RemoveEnemy()
+    {
+        enemyCount--;
     }
 }

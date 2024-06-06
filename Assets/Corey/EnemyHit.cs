@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class EnemyHit : MonoBehaviour
 {
+    public static event Action onDestroyEnemy;
+
     [SerializeField]
     private int health;
 
@@ -45,6 +48,7 @@ public class EnemyHit : MonoBehaviour
 
     private void Die()
     {
+        onDestroyEnemy?.Invoke();
         Destroy(gameObject);
     }
 
