@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class FurnaceCollision : MonoBehaviour
 {
+    public static event Action onDestroyCoal;
+
     public Furnace furnace;
 
     public RagdollScript ragdoll;
@@ -15,6 +18,7 @@ public class FurnaceCollision : MonoBehaviour
         {
             if (IsHeld(other)) return;
 
+            onDestroyCoal?.Invoke();
             furnace.HealDamage(20);
             Destroy(other.gameObject);
 
