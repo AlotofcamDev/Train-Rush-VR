@@ -15,4 +15,14 @@ public class RespawnTrigger : MonoBehaviour
             other.GetComponent<RagdollScript>().StopDialogue();
         }
     }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Ragdoll")
+        {
+            other.gameObject.transform.position = ragdollSpawn.position;
+            other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+            other.gameObject.GetComponent<RagdollScript>().StopDialogue();
+        }
+    }
 }
