@@ -64,7 +64,7 @@ public class Shop : MonoBehaviour
     {
         if (gameManager.credits >= BuyValue2)
         {
-            Buy3.interactable = false;
+            Buy2.interactable = false;
             ChunkierCoal = true;
             gameManager.credits -= BuyValue2;
 
@@ -77,7 +77,7 @@ public class Shop : MonoBehaviour
     {
         if(gameManager.credits >= BuyValue3)
         {
-            Buy2.interactable = false;
+            Buy3.interactable = false;
             FasterTrain = true;
             gameManager.credits -= BuyValue3;
 

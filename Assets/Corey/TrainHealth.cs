@@ -41,9 +41,10 @@ public class TrainHealth : MonoBehaviour
 
         if (health <= 0f)
         {
+            ragdoll.GameOver();
             Debug.Log("Game end");
         }
-        else if (health <= 20f)
+        else if (health == 20f)
         {
             ragdoll.HealthLow();
         }

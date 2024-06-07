@@ -300,4 +300,16 @@ public class RagdollScript : MonoBehaviour
     {
         aSource.Stop();
     }
+
+    public void GameOver()
+    {
+        screenFade.FadeOut();
+        isFading = true;
+
+        warningLineTimer = 0;
+        damageWarningTimer = 0;
+        coalWarningTimer = 0;
+
+        StopDialogue();
+    }
 }
