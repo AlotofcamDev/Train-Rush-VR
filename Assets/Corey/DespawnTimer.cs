@@ -10,7 +10,7 @@ public class DespawnTimer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.GetComponent<AudioSource>().volume = PlayerPrefs.GetFloat("masterVolume");
     }
 
     // Update is called once per frame

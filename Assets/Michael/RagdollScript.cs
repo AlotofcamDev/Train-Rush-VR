@@ -208,7 +208,7 @@ public class RagdollScript : MonoBehaviour
 
     public void DamagePort()
     {
-        if (warningLineTimer > warningLineTime && !isIntro && coalWarningTimer > coalWarningTime)
+        if (damageWarningTimer > damageWarningTime && !isIntro)
         {
             Debug.Log("Taking damage port side!");
             aSource.clip = voicelines[13];
@@ -216,12 +216,13 @@ public class RagdollScript : MonoBehaviour
 
             warningLineTimer = 0;
             damageWarningTimer = 0;
+            coalWarningTimer = 0;
         }
     }
 
     public void DamageStarboard()
     {
-        if (warningLineTimer > warningLineTime && !isIntro && coalWarningTimer > coalWarningTime)
+        if (damageWarningTimer > damageWarningTime && !isIntro)
         {
             Debug.Log("Taking damage starboard side!");
             aSource.clip = voicelines[22];
@@ -229,6 +230,7 @@ public class RagdollScript : MonoBehaviour
 
             warningLineTimer = 0;
             damageWarningTimer = 0;
+            coalWarningTimer = 0;
         }
     }
 

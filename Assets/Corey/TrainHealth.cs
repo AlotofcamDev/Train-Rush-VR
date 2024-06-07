@@ -42,7 +42,7 @@ public class TrainHealth : MonoBehaviour
         healthText.color = Color.Lerp(healthText.color, normalTextColor, Time.deltaTime);
     }
 
-    public void takeDamage(float damage)
+    public void takeDamage(float damage, bool isLeftSide)
     {
         health -= damage;
 
@@ -54,6 +54,16 @@ public class TrainHealth : MonoBehaviour
         else if (health == 20f)
         {
             ragdoll.HealthLow();
+        }
+        else if (isLeftSide)
+        {
+            ragdoll.DamageStarboard();
+            Debug.Log("Damage Starboard");
+        }
+        else
+        {
+            ragdoll.DamagePort();
+            Debug.Log("Damage Port");
         }
 
         healthDisplay.value = health;

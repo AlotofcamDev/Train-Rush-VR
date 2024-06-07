@@ -41,6 +41,10 @@ public class EnemyAttack : MonoBehaviour
         Vector3 throwDir = (horDir + Vector3.up*throwHeight).normalized;
 
         GameObject inst = Instantiate(bomb, bombOrigin.position, Quaternion.identity);
+
+        // (M)
+        inst.GetComponent<EnemyBomb>().isLeftSide = GetComponent<EnemyMovement>().isLeftSide;
+
         Rigidbody bombrb = inst.GetComponent<Rigidbody>();
         bombrb.AddForce(throwDir * throwForce, ForceMode.Impulse);
         bombrb.maxAngularVelocity = 20f;

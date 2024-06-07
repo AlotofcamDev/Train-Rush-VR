@@ -7,6 +7,9 @@ public class EnemyBomb : MonoBehaviour
     public float damage;
     public GameObject explosion;
 
+    // (M)
+    public bool isLeftSide;
+
     public MeshRenderer meshRenderer;
     public Collider col;
     public DespawnTimer despawnScript;
@@ -30,7 +33,8 @@ public class EnemyBomb : MonoBehaviour
         if (other.tag == "MainTrain")
         {
             // do sfx and other fx
-            other.GetComponent<TrainHealth>().takeDamage(damage);
+            other.GetComponent<TrainHealth>().takeDamage(damage, isLeftSide);
+
             Instantiate(explosion, transform.position, Quaternion.identity);
             SimpleHapticVibrationManager.VibrateController(0.2f, 0.4f, OVRInput.Controller.LTouch);
             SimpleHapticVibrationManager.VibrateController(0.2f, 0.4f, OVRInput.Controller.RTouch);
