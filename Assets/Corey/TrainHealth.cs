@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
 using UnityEngine.UI;
 using TMPro;
 
 public class TrainHealth : MonoBehaviour
 {
-    //public static event Action onTrainDamage;
     public float startHealth;
     public float health;
 
@@ -15,6 +13,13 @@ public class TrainHealth : MonoBehaviour
     public Slider healthDisplay;
     public TextMeshProUGUI healthText;
     public RagdollScript ragdoll;
+
+    public Image sliderImage;
+    public Color normalColor;
+    public Color hurtColor;
+
+    public Color normalTextColor;
+    public Color hurtTextColor;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +31,8 @@ public class TrainHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //aSource.
+        sliderImage.color = Color.Lerp(sliderImage.color, normalColor, Time.deltaTime);
+        healthText.color = Color.Lerp(healthText.color, normalTextColor, Time.deltaTime);
     }
 
     public void takeDamage(float damage)
@@ -43,6 +49,9 @@ public class TrainHealth : MonoBehaviour
         }
 
         healthDisplay.value = health;
-        healthText.text = "Train Integrity: " + health + "%";
+        healthText.text = "Train Integrity: " + Mathf.Clamp(health, 0f, startHealth) + "%";
+
+        sliderImage.color = hurtColor;
+        healthText.color = hurtTextColor;
     }
 }
