@@ -11,6 +11,9 @@ public class FireCannon : MonoBehaviour
     public DiegeticRotator right;
     public GameObject bullet;
 
+    // (M)
+    public AudioSource cannonSound;
+
     public ParticleSystem particles;
     public float vibrationStrength = 0.5f;
     public float vibrationDuration = 0.2f;
@@ -56,6 +59,9 @@ public class FireCannon : MonoBehaviour
         particles.Play();
 
         fireTimer = 0f;
+
+        // (M)
+        cannonSound.Play();
     }
 
     public void ActivateFasterShooting()
