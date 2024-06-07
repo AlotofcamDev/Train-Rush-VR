@@ -26,7 +26,7 @@ public class FireCannon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        cannonSound.volume = PlayerPrefs.GetFloat("masterVolume");
     }
 
     // Update is called once per frame

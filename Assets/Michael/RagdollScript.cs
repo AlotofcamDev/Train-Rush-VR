@@ -41,6 +41,8 @@ public class RagdollScript : MonoBehaviour
         // aSource = GetComponent<AudioSource>();
         // grabbable = GetComponent<OVRGrabbableExtended>();
 
+        aSource.volume = PlayerPrefs.GetFloat("masterVolume");
+
         if (isIntro)
         {
             Debug.Log("Hey! You there! You must be the new conductor! I'm the little guy on the shelf in front of you. Can you... pick me up real quick? While you're holding me, I'll show you around.");

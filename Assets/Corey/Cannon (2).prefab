@@ -4913,7 +4913,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4327f2de9e3cb1d44aa4c7e78e8a802b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -4958,7 +4958,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -9975,6 +9975,7 @@ MonoBehaviour:
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
+  cannonSound: {fileID: 0}
   particles: {fileID: 0}
   vibrationStrength: 0.5
   vibrationDuration: 0.2
@@ -10695,6 +10696,7 @@ MonoBehaviour:
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
+  cannonSound: {fileID: 507720196296603654}
   particles: {fileID: 9203089920645953016}
   vibrationStrength: 1
   vibrationDuration: 0.1
@@ -11106,6 +11108,7 @@ MonoBehaviour:
   left: {fileID: 967222198623794553}
   right: {fileID: 967222199481162386}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
+  cannonSound: {fileID: 0}
   particles: {fileID: 0}
   vibrationStrength: 0.5
   vibrationDuration: 0.2

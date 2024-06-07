@@ -13,6 +13,7 @@ public class TrainHealth : MonoBehaviour
     public Slider healthDisplay;
     public TextMeshProUGUI healthText;
     public RagdollScript ragdoll;
+    public AudioSource aSource;
 
     public Image sliderImage;
     public Color normalColor;
@@ -26,6 +27,12 @@ public class TrainHealth : MonoBehaviour
     {
         //onTrainDamage += takeDamage;
         health = startHealth;
+
+        // (M)
+        if (aSource != null)
+        {
+            aSource.volume = PlayerPrefs.GetFloat("masterVolume");
+        }
     }
 
     // Update is called once per frame
