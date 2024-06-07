@@ -40,8 +40,16 @@ public class EnemyAttack : MonoBehaviour
         Vector3 horDir = (enemyMove.target.position - bombOrigin.position).normalized;
         Vector3 throwDir = (horDir + Vector3.up*throwHeight).normalized;
 
-        GameObject inst = Instantiate(bomb, bombOrigin.position, Random.rotation);
+        GameObject inst = Instantiate(bomb, bombOrigin.position, Quaternion.identity);
         Rigidbody bombrb = inst.GetComponent<Rigidbody>();
         bombrb.AddForce(throwDir * throwForce, ForceMode.Impulse);
+        bombrb.maxAngularVelocity = 20f;
+        if (horDir.x > 0)
+        {
+            bombrb.angularVelocity = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-18f, -6f));
+        } else
+        {
+            bombrb.angularVelocity = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(6f, 18f));
+        }
     }
 }

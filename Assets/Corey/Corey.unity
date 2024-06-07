@@ -409,6 +409,8 @@ MonoBehaviour:
   topSpeed: 10
   targetSpeed: 0
   closeEnoughToAttack: 0
+  isLeftSide: 0
+  closeEnoughForWarning: 0
 --- !u!114 &1263829345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -424,6 +426,7 @@ MonoBehaviour:
   health: 5
   knockbackForce: 100
   gameManager: {fileID: 0}
+  explosion: {fileID: 0}
 --- !u!4 &1263829346
 Transform:
   m_ObjectHideFlags: 0
@@ -1006,6 +1009,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
   health: 0
+  healthDisplay: {fileID: 0}
+  healthText: {fileID: 0}
+  ragdoll: {fileID: 0}
+  sliderImage: {fileID: 0}
+  normalColor: {r: 0, g: 0, b: 0, a: 0}
+  hurtColor: {r: 0, g: 0, b: 0, a: 0}
+  normalTextColor: {r: 0, g: 0, b: 0, a: 0}
+  hurtTextColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!65 &1987326103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5906,14 +5917,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shotStrength: 30
   barrelOffset: 5
-  cooldownTime: 0.25
   left: {fileID: 0}
   right: {fileID: 0}
   bullet: {fileID: 306655719284998073, guid: 1fa0b2d025157124c8b9804c2736449d, type: 3}
-  shop: {fileID: 0}
   particles: {fileID: 0}
   vibrationStrength: 0.5
   vibrationDuration: 0.2
+  fireRate: 0.6
 --- !u!33 &838073956045398299
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -6887,6 +6897,63 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &5844851357032985598
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.298
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.408
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 11.977
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521159, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_Name
+      value: Dynamite
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
 --- !u!1 &6316416698845487297
 GameObject:
   m_ObjectHideFlags: 0
