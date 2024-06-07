@@ -4932,8 +4932,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 5
-  throwHeight: 0.6
-  throwForce: 12
+  throwHeight: 0.8
+  throwForce: 9
   bomb: {fileID: 2450036871282921473, guid: e0e57a65aee6c7649a6ed91d49f3edac, type: 3}
   bombOrigin: {fileID: 5062415208631084313}
 --- !u!65 &6360574153242271204

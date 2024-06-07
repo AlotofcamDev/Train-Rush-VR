@@ -7,6 +7,12 @@ public class EnemyBomb : MonoBehaviour
     public float damage;
     public GameObject explosion;
 
+    public MeshRenderer meshRenderer;
+    public Collider col;
+    public DespawnTimer despawnScript;
+    public ParticleSystem particle1;
+    public ParticleSystem particle2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +34,14 @@ public class EnemyBomb : MonoBehaviour
             Instantiate(explosion, transform.position, Quaternion.identity);
             SimpleHapticVibrationManager.VibrateController(0.2f, 0.4f, OVRInput.Controller.LTouch);
             SimpleHapticVibrationManager.VibrateController(0.2f, 0.4f, OVRInput.Controller.RTouch);
-            Destroy(gameObject);
+            // enable timer scirpt
+            meshRenderer.enabled = false;
+            col.enabled = false;
+            despawnScript.enabled = true;
+            particle1.Stop();
+            particle2.Stop();
+            enabled = false;
+            //Destroy(gameObject);
         }
     }
 }

@@ -46,10 +46,10 @@ public class EnemyAttack : MonoBehaviour
         bombrb.maxAngularVelocity = 20f;
         if (horDir.x > 0)
         {
-            bombrb.angularVelocity = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-18f, -6f));
+            bombrb.angularVelocity = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(-24f, -6f));
         } else
         {
-            bombrb.angularVelocity = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(6f, 18f));
+            bombrb.angularVelocity = new Vector3(Random.Range(-2f, 2f), Random.Range(-2f, 2f), Random.Range(6f, 24f));
         }
     }
 }

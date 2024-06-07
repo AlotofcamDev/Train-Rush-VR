@@ -108,6 +108,7 @@ GameObject:
   - component: {fileID: 5104656131462039731}
   - component: {fileID: 2480228595896778293}
   - component: {fileID: 2556151316934716721}
+  - component: {fileID: 2847516397668358882}
   m_Layer: 0
   m_Name: EnemyBomb
   m_TagString: Untagged
@@ -162,6 +163,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 5
   explosion: {fileID: 7790049730590388140, guid: 9879d235a2526ec4c81270babe5b2434, type: 3}
+  meshRenderer: {fileID: 6115974682193392336}
+  col: {fileID: 6115974682193392337}
+  despawnScript: {fileID: 2847516397668358882}
+  particle1: {fileID: 6115974681058634316}
+  particle2: {fileID: 6115974682202162631}
+--- !u!114 &2847516397668358882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2450036871282921473}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bf89a5f8b959c44aba8dfdf8cf495de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  despawnTime: 10
 --- !u!1001 &431602046814308629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -213,14 +232,38 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5844851357216521157, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5844851357216521159, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
       propertyPath: m_Name
       value: Dynamite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+--- !u!198 &6115974681058634316 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5844851358351139673, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+  m_PrefabInstance: {fileID: 431602046814308629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &6115974682193392336 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5844851357216521157, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+  m_PrefabInstance: {fileID: 431602046814308629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &6115974682193392337 stripped
+CapsuleCollider:
+  m_CorrespondingSourceObject: {fileID: 5844851357216521156, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+  m_PrefabInstance: {fileID: 431602046814308629}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6115974682193392342 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5844851357216521155, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
+  m_PrefabInstance: {fileID: 431602046814308629}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6115974682202162631 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5844851357206678738, guid: 34d1093bcb97693428af33b1c962304e, type: 3}
   m_PrefabInstance: {fileID: 431602046814308629}
   m_PrefabAsset: {fileID: 0}
