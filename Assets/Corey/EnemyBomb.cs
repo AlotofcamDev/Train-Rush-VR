@@ -33,7 +33,7 @@ public class EnemyBomb : MonoBehaviour
         if (other.tag == "MainTrain")
         {
             // do sfx and other fx
-            other.GetComponent<TrainHealth>().takeDamage(damage, isLeftSide);
+            GameObject.Find("Train").GetComponent<TrainHealth>().takeDamage(damage, isLeftSide);
 
             Instantiate(explosion, transform.position, Quaternion.identity);
             SimpleHapticVibrationManager.VibrateController(0.2f, 0.4f, OVRInput.Controller.LTouch);
