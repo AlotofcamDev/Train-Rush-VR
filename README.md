@@ -14,3 +14,6 @@ Move : Joystick
 Grab : Side Button
 <br>
 Shoot Cannon : Tigger
+
+# Gameplay Video #
+https://youtu.be/dOFE7LwIRBY?si=H9rIWxdI4upJHvIv
