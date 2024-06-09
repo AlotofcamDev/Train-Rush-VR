@@ -36,8 +36,8 @@ public class EnemyBomb : MonoBehaviour
             GameObject.Find("Train").GetComponent<TrainHealth>().takeDamage(damage, isLeftSide);
 
             Instantiate(explosion, transform.position, Quaternion.identity);
-            SimpleHapticVibrationManager.VibrateController(0.2f, 0.4f, OVRInput.Controller.LTouch);
-            SimpleHapticVibrationManager.VibrateController(0.2f, 0.4f, OVRInput.Controller.RTouch);
+            SimpleHapticVibrationManager.VibrateController(0.2f, 0.3f, OVRInput.Controller.LTouch);
+            SimpleHapticVibrationManager.VibrateController(0.2f, 0.3f, OVRInput.Controller.RTouch);
             // enable timer scirpt
             meshRenderer.enabled = false;
             col.enabled = false;
