@@ -48,7 +48,7 @@ public class EnemyMovement : MonoBehaviour
         // 0.5 at health = max, 0.75 at health = max/2, 1 at health = 0
         speedMult = 1.5f - ((furnace.currentHealth + furnace.maxHealth) / (2f * furnace.maxHealth));
 
-        closeEnoughToAttack = transform.position.z >= target.position.z - 2f;
+        closeEnoughToAttack = transform.position.z >= target.position.z - 4f;
 
         // (M)
         if (transform.position.z >= target.position.z - 15f && !closeEnoughForWarning)

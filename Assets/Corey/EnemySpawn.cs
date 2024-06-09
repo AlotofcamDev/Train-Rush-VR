@@ -59,7 +59,7 @@ public class EnemySpawn : MonoBehaviour
 
             AddEnemy();
 
-            float forwardsOffset = Random.Range(-4f, 4f);
+            float forwardsOffset = Random.Range(-8f, 8f);
 
             Vector3 pos;
             bool coinFlipHeads = Random.Range(0, 2) == 0;
